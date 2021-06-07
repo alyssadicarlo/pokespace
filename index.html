@@ -30,7 +30,7 @@
               
                 <div id="navbarBasicExample" class="navbar-menu">
                   <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a href="index.html" class="navbar-item">
                       Home
                     </a>
               
@@ -74,12 +74,15 @@
             <div class="home__randomContent">
                 <img id="randomImage" src="https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
                 <span id="randomQuote">
-                    "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+                    <div class="loader"></div>
                 </span>
             </div>
             <form>
                 <div class="control">
-                    <input id="searchInput" class="input" type="text" placeholder="Search for Pokemon">
+                    <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokemon" autocomplete="off" list="pokemonList" required>
+                    <datalist>
+
+                    </datalist>
                 </div>
                 <button class="button is-primary" type="submit">Search</button>
             </form>
