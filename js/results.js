@@ -141,9 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((data) => {
             updatePokemonGender(data);
         }).catch((error) => {
-            updatePokemonGender({
-                name: "Unknown gender"
-            });
             return error;
         })
     }
