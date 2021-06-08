@@ -59,34 +59,34 @@
                   </div>
               
                   <div class="navbar-end">
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        <button id="pokeball" class="button">
-                          <img src="images/pokeball.png">
-                        </button>
-                      </div>
-                    </div>
+                    <a class="navbar-item">
+                        <img src="images/pokeball.png">
+                    </a>
                   </div>
                 </div>
             </nav>
         </header>
-        <div class="home">
-            <div class="home__randomContent">
-                <img id="randomImage" src="https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-                <span id="randomQuote">
-                    <div class="loader"></div>
-                </span>
-            </div>
-            <form>
-                <div class="control">
-                    <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokemon" autocomplete="off" list="pokemonList" required>
-                    <datalist>
-
-                    </datalist>
+        <main>
+            <div class="home">
+                <div class="home__randomContent">
+                    <!-- <img id="randomImage" src="https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"> -->
+                    <div class="quote">
+                        <span id="randomQuote">
+                            <div class="loader"></div>
+                        </span>
+                    </div>
                 </div>
-                <button class="button is-primary" type="submit">Search</button>
-            </form>
-        </div>
+                <form action="results.html" method="GET">
+                    <div class="control">
+                        <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
+                        <datalist>
+
+                        </datalist>
+                    </div>
+                    <button class="button is-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </main>
     </div>
     
     <script src="js/scripts.js"></script>

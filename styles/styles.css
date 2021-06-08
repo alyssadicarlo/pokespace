@@ -18,23 +18,51 @@ body {
     height: 50px;
 }
 
-.home {
-    height: calc(100vh - 56px);
+header {
+    border-bottom: 1px solid black;
+}
+
+.navbar-burger {
+    width: 66px;
+    height: 66px;
+}
+
+.quote {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 2px solid #dbdbdb;
+}
+
+main {
+    background-image: url('https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg');
+    background-position: center;
+    height: calc(100vh - 67px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+.home {
+    padding: 40px;
+    border-radius: 10px;
+    background: white;
+    margin: 20px;
+    box-shadow: 0 0 10px 3px #4a4a4a;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
 .home__randomContent {
     max-width: 400px;
-    width: 90%;
-    margin-top: -50px;
     margin-bottom: 35px;
 }
 
 .home img {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -54,7 +82,6 @@ body {
 }
 
 .home form {
-    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -73,7 +100,12 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-@media screen and (min-width: 436px) {
+@media screen and (min-width: 500px) {
+
+    .home__randomContent {
+        min-width: 400px;
+    }
+
     .home form {
         flex-direction: row;
         max-width: 600px;
