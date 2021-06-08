@@ -61,9 +61,11 @@ button:hover, a:hover {
   flex-direction: row;
 }
 
+.margin {
+  margin: 0.01em 16px;
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
-  .stats {
-    max-height: calc(669.45px - 56.99px);
-    overflow: scroll;
-  }
+
 }

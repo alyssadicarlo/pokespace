@@ -1,5 +1,5 @@
 * {
-    font-size: 16px;
+    font-size: 100%;
     box-sizing: border-box;
 }
 
@@ -17,14 +17,14 @@ body {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 
 .icon img {
-    max-height: 50px;
-    width: 50px;
-    height: 50px;
+    max-height: 3.125rem;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 
 header {
@@ -32,21 +32,23 @@ header {
 }
 
 .navbar-burger {
-    width: 66px;
-    height: 66px;
+    width: 4.125rem;
+    height: 4.125rem;
 }
 
 .quote {
-    margin-top: 5px;
-    margin-left: 5px;
-    padding-left: 10px;
+    margin-top: 0.32rem;
+    margin-left: 0.32rem;
+    padding-left: 0.62rem;
     border-left: 2px solid #dbdbdb;
 }
 
 main {
     background-image: url('../images/background.jpeg');
     background-position: center;
-    height: calc(100vh - 67px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 4.1875rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,40 +56,40 @@ main {
 }
 
 .home {
-    padding: 40px;
-    border-radius: 10px;
+    padding: 2.5rem;
+    border-radius: 0.625rem;
     background: white;
-    margin: 20px;
+    margin: 1.25rem;
     box-shadow: 0 0 10px 3px #4a4a4a;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
 }
 
 .home__randomContent {
-    max-width: 400px;
-    margin-bottom: 35px;
+    max-width: 25rem;
+    margin-bottom: 2rem;
 }
 
 .home img {
     width: 50%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
 }
 
 .home input {
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     margin: 0;
 }
 
 .home button {
-    padding: 10px;
-    margin-top: 10px;
+    padding: 0.62rem;
+    margin-top: 0.625rem;
 }
 
 .home form {
@@ -99,9 +101,24 @@ main {
     border: 2px solid #f3f3f3; /* Light grey */
     border-top: 2px solid #3498db; /* Blue */
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
     animation: spin 2s linear infinite;
+}
+
+.absolute-icon {
+    margin: 0.3rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.19rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 @keyframes spin {
@@ -112,20 +129,20 @@ main {
 @media screen and (min-width: 500px) {
 
     .home__randomContent {
-        min-width: 400px;
+        min-width: 25rem;
     }
 
     .home form {
         flex-direction: row;
-        max-width: 600px;
+        max-width: 37.5rem;
     }
 
     .home .control {
-        width: calc(100% - 72.5px);
+        width: calc(100% - 4.53rem);
     }
 
     .home button {
-        margin-left: 10px;
+        margin-left: 0.625rem;
         margin-top: 0;
     }
 }
