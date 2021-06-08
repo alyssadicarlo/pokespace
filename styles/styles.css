@@ -35,7 +35,7 @@ header {
 }
 
 main {
-    background-image: url('https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRmbmdlrWZlbWU.jpg');
+    background-image: url('../images/background.jpeg');
     background-position: center;
     height: calc(100vh - 67px);
     display: flex;
