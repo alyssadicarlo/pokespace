@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     searchInput.addEventListener('keyup', (event) => {
-        console.log(event.target.value);
         if (searchInput.value) {
             datalist.id = "pokemonList";    		
         } else {
@@ -33,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addPokemonToList(data) {
         const pokemonData = data.results;
-
+                
         pokemonData.forEach((item) => {
             pokemon.push(item.name);
         });
