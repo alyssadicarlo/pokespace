@@ -74,13 +74,45 @@ main {
 
 .home input {
     width: 100%;
-    padding: 0.625rem;
-    margin: 0;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 8px 16px;
+    /*padding: 0.625rem;
+    */margin: 0;
+    color: -internal-light-dark(black, white);
+    text-align: start;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    cursor: text;
+    border: 1px solid black;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 
-.home button {
-    padding: 0.62rem;
-    margin-top: 0.625rem;
+.home input:hover {
+    border: 1px solid black;
+}
+
+.home .button {
+    padding: 8px 16px;
+    font-size: 16px;
+    width: 100px;
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.home .button:hover {
+    color: #000!important;
+    background-color: #CCE!important;
+    opacity: 0.7;
 }
 
 .home form {

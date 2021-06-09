@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <title>PokéSpace</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Raleway"
-  />
-  <link rel="stylesheet" href="styles/results.css" />
+  <head>
+    <title>PokéSpace</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link rel="stylesheet" href="styles/results.css" />
+    <link rel="shortcut icon" type="image/png" href="images/pokeball.png"/>
+  </head>
   <body class="w3-light-grey">
-    <!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width: 1400px">
-      <!-- Header -->
       <header class="w3-container w3-center w3-padding-32 container">
         <h1><b>P O K É S P A C E</b></h1>
         <p>Welcome to the Poké<span class="w3-tag">Space</span></p>
@@ -28,31 +28,28 @@ and is wrapped around the whole page content, except for the footer in this exam
         </form>
       </header>
 
-      <!-- Grid -->
       <div class="w3-row container">
-        <!-- Blog entries -->
-
-        <!-- Introduction menu -->
         <div class="w3-col l4">
-          <!-- About Card -->
-          <div class="w3-card w3-margin w3-margin-top">
+          <div class="w3-card w3-margin w3-margin-top profile">
             <div class="w3-container w3-padding">
               <h4>Profile</h4>
             </div>
             <div class="flex-row">
               <div>
-                <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
+                <div class="pokemon__image_wrapper">
+                  <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
+                </div>
                 <figcaption id="pokemonMood"></figcaption>
               </div>
               <div class="w3-container w3-white margin">
                 <h4 id="pokemonName"><b></b></h4>
                 <p id="pokemonGender"></p>
                 <p id="pokemonDescription"></p>
+                <p id="pokemonRandomGame"></p>
               </div>
             </div>
           </div>
           <hr />
-          <!-- Posts -->
           <div class="w3-card w3-margin">
             <div class="w3-container w3-padding">
               <h4>Characteristics</h4>
@@ -103,32 +100,46 @@ and is wrapped around the whole page content, except for the footer in this exam
           </div>
           <hr />
 
-          <!-- END Introduction Menu -->
         </div>
         <div class="w3-col l8 s12">
           <div class="w3-card-4 w3-margin w3-white stats">
             <div style="background-color: #f1f1f1;" class="w3-container w3-padding">
               <h4>Statistics</h4>
             </div>
-
             <div class="w3-container">
-              <div class="w3-col m6 s12">
-                <p id="pokemonStats"></p>
+              <div class="w3-col m6 s12 w3-padding">
+                <p id="pokedexNumber"></p>
+                <form>
+                  <label>Abilities:
+                    <select id="pokemonAbilities"></select>
+                  </label>
+                </form>
+                <div>
+                  <p><span id="abilityEffect"></span></p>
+                </div>
               </div>
-              <div class="w3-col m6 s12">
-                <p id="pokemonStats2"></p>
+              <div class="w3-col m6 s12 w3-padding">
+                <p id="baseExperience"></p>
+                <form>
+                  <label>Moves:
+                    <select id="pokemonMoves"></select>
+                  </label>
+                </form>
+                <div>
+                  <p><span id="moveEffect"></span></p>
+                  <p>Type: <span id="type"></span></p>
+                  <p>Power: <span id="power"></span></p>
+                  <p>Accuracy: <span id="accuracy"></span></p>
+                  <p>PP: <span id="pp"></span></p>
+                  <p>Damage Class: <span id="damage"></span></p>
+                </div>
               </div>
             </div>
           </div>
           <hr />          
-          <!-- END BLOG ENTRIES -->
         </div>
-        <!-- END GRID -->
       </div>
       <br />
-
-
-      <!-- END w3-content -->
     </div>
     <script src="js/results.js"></script>
     <script src="js/get_pokemon_list.js"></script>
