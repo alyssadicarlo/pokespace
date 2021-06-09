@@ -1,26 +1,26 @@
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
+    background-color: #0856b5;
+    padding: 12px 10px;
   }
   
   /* Style the header links */
   .header a {
     float: left;
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
+    text-decoration: none;g
+    font-size: 12px;
+    line-height: 20px;
     border-radius: 4px;
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
   .header a.logo {
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bolder;
   }
   
   /* Change the background color on mouse-over */
@@ -40,14 +40,69 @@
     float: right;
   }
   
+  /* header2
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
-    .header a {
+    .header2 a {
       float: none;
       display: block;
       text-align: left;
     }
-    .header-right {
+    .header2-right {
+      float: none;
+    }
+  }
+
+    /* Style the header with a grey background and some padding */
+.header2 {
+    overflow: hidden;
+    background-color: #5191e1;
+    padding: 18px 10px;
+  }
+  
+  /* Style the header links */
+  .header2 a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 2px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+  .header2 a.logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header2 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the active/current link*/
+  .header2 a.active {
+    background-color: #237be6;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header2-center {
+    float: center;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header2 a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header2-right {
       float: none;
     }
   }
