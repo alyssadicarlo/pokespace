@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gender = "";
 
     function generateRandomMood() {
-        const listOfMoods = ['happy \n😊', 'peachy \n😌', 'sad \n😭', 'romantic \n🥰', 'reflective \n🤔', 'cheerful \n😁', 'shocked \n😮', 'worried \n😰'];
+        const listOfMoods = ['Happy \n😊', 'Peachy \n😌', 'Sad \n😭', 'Romantic \n🥰', 'Reflective \n🤔', 'Cheerful \n😁', 'Shocked \n😮', 'Worried \n😰'];
 
         const randomIndex = Math.floor(Math.random() * listOfMoods.length);
 
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const pokemonName = document.querySelector('#pokemonName');
         const pokemonHeight = document.querySelector('#pokemonHeight');
         const pokemonWeight = document.querySelector('#pokemonWeight');
-        const pokemonStats = document.querySelector('#pokemonStats');
-        const pokemonStats_2 = document.querySelector('#pokemonStats2')
+        const baseExperience = document.querySelector('#baseExperience');
+        const pokedexNumber = document.querySelector('#pokedexNumber');
         const pokemonSpecies = document.querySelector('#pokemonSpecies');
 
         if (pokemonData.sprites.other.dream_world.front_default !== null) {
@@ -48,11 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonName.innerHTML = `<strong>${pokemonData.forms[0].name.slice(0,1).toUpperCase()}${pokemonData.forms[0].name.slice(1,pokemonData.forms[0].name.length)}</strong>`;
         pokemonHeight.innerText = (pokemonData.height * 10) + ' cm';
         pokemonWeight.innerText = Math.round((pokemonData.weight / 4.536)) + ' lb';
-        pokemonSpecies.innerText = pokemonData.species.name;
+        pokemonSpecies.innerText = `${pokemonData.species.name.slice(0,1).toUpperCase()}${pokemonData.species.name.slice(1, pokemonData.species.name.length)}`;
 
-        const baseExperience = document.createElement('p');
-        baseExperience.innerHTML = `Base experience: ${pokemonData.base_experience}`;
-        pokemonStats.append(baseExperience);
+        baseExperience.innerHTML = `Base Experience: ${pokemonData.base_experience}`;
 
         const abilities = pokemonData.abilities;
         const abilitiesSelectElement = document.querySelector('#pokemonAbilities');
@@ -88,22 +86,14 @@ document.addEventListener('DOMContentLoaded', () => {
             fetchMoveStats(url);
         })
 
-        // GAMES - not using right now
+        const games = data.game_indices;
+        const randomIndex = Math.floor(Math.random() * games.length);
+        let randomGame = games[randomIndex].version.name;
+        randomGame = randomGame.replace('-', ' ');
+        const randomGameElement = document.querySelector('#pokemonRandomGame');
+        randomGameElement.innerHTML = `Currently playing: Pokémon ${randomGame.slice(0,1).toUpperCase()}${randomGame.slice(1,randomGame.length)}`;
 
-        // const games = data.game_indices;
-
-        // const gamesTitle = document.createElement('p');
-        // gamesTitle.innerText = "Games appeared in";
-        // pokemonStats_2.append(gamesTitle);
-
-        // const gamesListElement = document.createElement('ul');
-        // games.forEach((game) => {
-        //     const listItem = document.createElement('li');
-        //     listItem.innerText = game.version.name;
-        //     gamesListElement.append(listItem);
-        // });
-
-        // pokemonStats_2.append(gamesListElement);
+        pokedexNumber.innerText = `Pokédex #: ${pokemonData.id}`;
     
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
@@ -124,7 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateAbilityStats(data) {
         const effect = document.querySelector('#abilityEffect');
-        effect.innerText = data.effect_entries[1].effect;
+        const effectData = data.effect_entries;
+        effectData.forEach((effectItem) => {
+            if (effectItem.language.name === "en") {
+                effect.innerText = effectItem.effect;
+            };
+        });
     }
 
     function fetchMoveStats(url) {
@@ -146,10 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const pp = document.querySelector('#pp');
 
         effect.innerText = data.effect_entries[0].effect;
-        type.innerText = data.type.name;
+        type.innerText = `${data.type.name.slice(0,1).toUpperCase()}${data.type.name.slice(1,data.type.name.length)}`;
         power.innerText = data.power;
         accuracy.innerText = data.accuracy;
-        damageClass.innerText = data.damage_class.name;
+        damageClass.innerText = `${data.damage_class.name.slice(0,1).toUpperCase()}${data.damage_class.name.slice(1,data.damage_class.name.length)}`;
         pp.innerText = data.pp;
     }
 
@@ -186,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updatePokemonColor(data) {
         const pokemonColor = document.querySelector('#pokemonColor');
-        pokemonColor.innerText = data.color.name;
+        pokemonColor.innerText = `${data.color.name.slice(0,1).toUpperCase()}${data.color.name.slice(1, data.color.name.length)}`;
     }
 
     function fetchPokemonGender(id) {
@@ -203,11 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
             genderlessPokemon.push((pokemon.pokemon_species.name));
             });
 
-            console.log(genderlessPokemon);
-
             const isGenderless = genderlessPokemon.includes(pokemon);
             if (isGenderless === true) {
-                gender = "genderless";
+                gender = "Genderless";
                 updatePokemonGender();
             } else {
                 generateRandomGender();
@@ -226,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateRandomGender() {
-        const genders = ['female', 'male'];
+        const genders = ['Female', 'Male'];
 
         const randomIndex = Math.floor(Math.random() * genders.length);
         gender = genders[randomIndex];
