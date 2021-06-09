@@ -3,7 +3,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
     const pokemon = searchInput.slice(9,searchInput.length);
-    
+
+    function generateRandomMood() {
+        const listOfMoods = ['happy 😊', 'peachy 😌', 'sad 😭', 'romantic 🥰', 'reflective 🤔', 'cheerful 😁', 'shocked 😮', 'worried 😰'];
+
+        const randomIndex = Math.floor(Math.random() * listOfMoods.length);
+
+        const pokemonMood = document.querySelector('#pokemonMood');
+        pokemonMood.innerText = `Mood: ${listOfMoods[randomIndex]}`;
+    }
     
     function fetchPokemonDetails() {
         fetch(
@@ -33,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             pokemonImage.src = 'images/not_found.jpg';
         }
 
-        pokemonName.innerHTML = `<b>${pokemonData.forms[0].name.slice(0,1).toUpperCase()}${pokemonData.forms[0].name.slice(1,pokemonData.forms[0].name.length)}</b>`;
-        pokemonHeight.innerText = pokemonData.height;
-        pokemonWeight.innerText = pokemonData.weight;
+        pokemonName.innerHTML = `<strong>${pokemonData.forms[0].name.slice(0,1).toUpperCase()}${pokemonData.forms[0].name.slice(1,pokemonData.forms[0].name.length)}</strong>`;
+        pokemonHeight.innerText = (pokemonData.height * 10) + ' cm';
+        pokemonWeight.innerText = Math.round((pokemonData.weight / 4.536)) + ' lb';
         pokemonSpecies.innerText = pokemonData.species.name;
 
         const baseExperience = document.createElement('p');
@@ -89,14 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
-    }
-
-    function findImage(data) {
-        const images = data.sprites;
-
-        images.forEach((image) => {
-            console.log(image);
-        })
+        fetchPokemonGender(pokemonData.id);
     }
 
     function fetchPokemonDescription(id) {
@@ -132,6 +133,27 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonColor.innerText = data.color.name;
     }
 
+    function fetchPokemonGender(id) {
+        fetch(
+            `https://pokeapi.co/api/v2/gender/${id}`
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            updatePokemonGender(data);
+        }).catch((error) => {
+            return error;
+        })
+    }
+
+    function updatePokemonGender(data) {
+
+        const pokemonGender = document.querySelector('#pokemonGender');
+
+        const gender = data.name;
+        pokemonGender.innerText = gender;
+    }
+
     fetchPokemonDetails();
+    generateRandomMood();
 
 });

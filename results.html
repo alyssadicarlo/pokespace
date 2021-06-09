@@ -14,9 +14,18 @@
 and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width: 1400px">
       <!-- Header -->
-      <header class="w3-container w3-center w3-padding-32">
+      <header class="w3-container w3-center w3-padding-32 container">
         <h1><b>P O K É S P A C E</b></h1>
         <p>Welcome to the Poké<span class="w3-tag">Space</span></p>
+        <form action="results.html" method="GET">
+          <div class="form-flex">
+              <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
+              <datalist>
+
+              </datalist>
+              <button class="w3-button w3-black button" type="submit">Search</button>
+          </div>
+        </form>
       </header>
 
       <!-- Grid -->
@@ -31,9 +40,13 @@ and is wrapped around the whole page content, except for the footer in this exam
               <h4>Profile</h4>
             </div>
             <div class="flex-row">
-              <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
-              <div class="w3-container w3-white">
+              <div>
+                <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
+                <figcaption id="pokemonMood"></figcaption>
+              </div>
+              <div class="w3-container w3-white margin">
                 <h4 id="pokemonName"><b></b></h4>
+                <p id="pokemonGender"></p>
                 <p id="pokemonDescription"></p>
               </div>
             </div>
@@ -52,7 +65,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                   class="w3-left w3-margin-right"
                   style="width: 50px"
                 />
-                <span class="w3-large">Height</span><br />
+                <span class="w3-large"><strong>Height</strong></span><br />
                 <span id="pokemonHeight"></span>
               </li>
               <li class="w3-padding-16">
@@ -73,7 +86,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                   class="w3-left w3-margin-right"
                   style="width: 50px"
                 />
-                <span class="w3-large">Color</span><br />
+                <span class="w3-large"><strong>Color</strong></span><br />
                 <span id="pokemonColor"></span>
               </li>
               <li class="w3-padding-16 w3-hide-medium w3-hide-small">
@@ -83,7 +96,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                   class="w3-left w3-margin-right"
                   style="width: 50px"
                 />
-                <span class="w3-large">Species</span><br />
+                <span class="w3-large"><strong>Species</strong></span><br />
                 <span id="pokemonSpecies"></span>
               </li>
             </ul>
@@ -118,5 +131,6 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- END w3-content -->
     </div>
     <script src="js/results.js"></script>
+    <script src="js/get_pokemon_list.js"></script>
   </body>
 </html>
