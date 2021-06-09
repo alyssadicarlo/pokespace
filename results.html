@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
     />
     <link rel="stylesheet" href="styles/results.css" />
+    <link rel="shortcut icon" type="image/png" href="images/pokeball.png"/>
   </head>
   <body class="w3-light-grey">
     <div class="w3-content" style="max-width: 1400px">
@@ -29,13 +30,15 @@
 
       <div class="w3-row container">
         <div class="w3-col l4">
-          <div class="w3-card w3-margin w3-margin-top">
+          <div class="w3-card w3-margin w3-margin-top profile">
             <div class="w3-container w3-padding">
               <h4>Profile</h4>
             </div>
             <div class="flex-row">
               <div>
-                <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
+                <div class="pokemon__image_wrapper">
+                  <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
+                </div>
                 <figcaption id="pokemonMood"></figcaption>
               </div>
               <div class="w3-container w3-white margin">
@@ -102,13 +105,32 @@
             <div style="background-color: #f1f1f1;" class="w3-container w3-padding">
               <h4>Statistics</h4>
             </div>
-
             <div class="w3-container">
-              <div class="w3-col m6 s12">
+              <div class="w3-col m6 s12 w3-padding">
                 <p id="pokemonStats"></p>
+                <form>
+                  <label>Abilities:
+                    <select id="pokemonAbilities"></select>
+                  </label>
+                </form>
+                <div>
+                  <p><span id="abilityEffect"></span></p>
+                </div>
               </div>
-              <div class="w3-col m6 s12">
-                <p id="pokemonStats2"></p>
+              <div class="w3-col m6 s12 w3-padding">
+                <form>
+                  <label>Moves:
+                    <select id="pokemonMoves"></select>
+                  </label>
+                </form>
+                <div>
+                  <p><span id="moveEffect"></span></p>
+                  <p>Type: <span id="type"></span></p>
+                  <p>Power: <span id="power"></span></p>
+                  <p>Accuracy: <span id="accuracy"></span></p>
+                  <p>PP: <span id="pp"></span></p>
+                  <p>Damage Class: <span id="damage"></span></p>
+                </div>
               </div>
             </div>
           </div>

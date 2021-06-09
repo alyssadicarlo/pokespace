@@ -3,9 +3,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
     const pokemon = searchInput.slice(9,searchInput.length);
+    let gender = "";
 
     function generateRandomMood() {
-        const listOfMoods = ['happy 😊', 'peachy 😌', 'sad 😭', 'romantic 🥰', 'reflective 🤔', 'cheerful 😁', 'shocked 😮', 'worried 😰'];
+        const listOfMoods = ['happy \n😊', 'peachy \n😌', 'sad \n😭', 'romantic \n🥰', 'reflective \n🤔', 'cheerful \n😁', 'shocked \n😮', 'worried \n😰'];
 
         const randomIndex = Math.floor(Math.random() * listOfMoods.length);
 
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         }).then((data) => {
             updatePokemonDetails(data);
+        }).catch((error) => {
+            console.log(error);
+            return error;
         })
     };
 
@@ -51,53 +55,102 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonStats.append(baseExperience);
 
         const abilities = pokemonData.abilities;
+        const abilitiesSelectElement = document.querySelector('#pokemonAbilities');
+        const firstAbilityElement = abilities[0].ability.url;
+        fetchAbilityStats(firstAbilityElement);
 
-        const abilityTitle = document.createElement('p');
-        abilityTitle.innerText = "Abilities";
-        pokemonStats.append(abilityTitle);
-
-        const abilityListElement = document.createElement('ul');
         abilities.forEach((ability) => {
-            const listItem = document.createElement('li');
-            listItem.innerText = ability.ability.name;
-            abilityListElement.append(listItem);
+            const optionElement = document.createElement('option');
+            optionElement.value = ability.ability.url;
+            optionElement.innerText = ability.ability.name;
+            abilitiesSelectElement.append(optionElement);
         });
 
-        pokemonStats.append(abilityListElement);
+        abilitiesSelectElement.addEventListener('change', (event) => {
+            const url = event.target.value;
+            fetchAbilityStats(url);
+        })
 
-        const moves = data.moves;
-
-        const movesTitle = document.createElement('p');
-        movesTitle.innerText = "Moves";
-        pokemonStats.append(movesTitle);
+        const moves = pokemonData.moves;
+        const movesSelectElement = document.querySelector('#pokemonMoves');
+        const firstMoveElement = moves[0].move.url;
+        fetchMoveStats(firstMoveElement);
         
-        const movesListElement = document.createElement('ul');
         moves.forEach((move) => {
-            const listItem = document.createElement('li');
-            listItem.innerText = move.move.name;
-            movesListElement.append(listItem);
+            const optionElement = document.createElement('option');
+            optionElement.value = move.move.url;
+            optionElement.innerText = move.move.name;
+            movesSelectElement.append(optionElement);
         });
 
-        pokemonStats.append(movesListElement);
+        movesSelectElement.addEventListener('change', (event) => {
+            const url = event.target.value;
+            fetchMoveStats(url);
+        })
 
-        const games = data.game_indices;
+        // GAMES - not using right now
 
-        const gamesTitle = document.createElement('p');
-        gamesTitle.innerText = "Games appeared in";
-        pokemonStats_2.append(gamesTitle);
+        // const games = data.game_indices;
 
-        const gamesListElement = document.createElement('ul');
-        games.forEach((game) => {
-            const listItem = document.createElement('li');
-            listItem.innerText = game.version.name;
-            gamesListElement.append(listItem);
-        });
+        // const gamesTitle = document.createElement('p');
+        // gamesTitle.innerText = "Games appeared in";
+        // pokemonStats_2.append(gamesTitle);
 
-        pokemonStats_2.append(gamesListElement);
+        // const gamesListElement = document.createElement('ul');
+        // games.forEach((game) => {
+        //     const listItem = document.createElement('li');
+        //     listItem.innerText = game.version.name;
+        //     gamesListElement.append(listItem);
+        // });
+
+        // pokemonStats_2.append(gamesListElement);
     
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
-        fetchPokemonGender(pokemonData.id);
+    }
+
+    function fetchAbilityStats(url) {
+        fetch(
+            url
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            updateAbilityStats(data);
+        }).catch((error) => {
+            console.log(error);
+            return error;
+        });
+    }
+
+    function updateAbilityStats(data) {
+        const effect = document.querySelector('#abilityEffect');
+        effect.innerText = data.effect_entries[1].effect;
+    }
+
+    function fetchMoveStats(url) {
+        fetch(
+            url
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            updateMoveStats(data);
+        });
+    }
+
+    function updateMoveStats(data) {
+        const effect = document.querySelector('#moveEffect');
+        const type = document.querySelector('#type');
+        const power = document.querySelector('#power');
+        const accuracy = document.querySelector('#accuracy');
+        const damageClass = document.querySelector('#damage');
+        const pp = document.querySelector('#pp');
+
+        effect.innerText = data.effect_entries[0].effect;
+        type.innerText = data.type.name;
+        power.innerText = data.power;
+        accuracy.innerText = data.accuracy;
+        damageClass.innerText = data.damage_class.name;
+        pp.innerText = data.pp;
     }
 
     function fetchPokemonDescription(id) {
@@ -109,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePokemonDescription(data);
         }).catch((error) => {
             return error;
-        })
+        });
     }
 
     function updatePokemonDescription(data) {
@@ -125,6 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         }).then((data) => {
             updatePokemonColor(data);
+        }).catch((error) => {
+            console.log(error);
+            return error;
         })
     }
 
@@ -139,21 +195,46 @@ document.addEventListener('DOMContentLoaded', () => {
         ).then((response) => {
             return response.json();
         }).then((data) => {
-            updatePokemonGender(data);
+            const genderlessPokemonData = data.pokemon_species_details;
+
+            let genderlessPokemon = [];
+
+            genderlessPokemonData.forEach((pokemon) => {
+            genderlessPokemon.push((pokemon.pokemon_species.name));
+            });
+
+            console.log(genderlessPokemon);
+
+            const isGenderless = genderlessPokemon.includes(pokemon);
+            if (isGenderless === true) {
+                gender = "genderless";
+                updatePokemonGender();
+            } else {
+                generateRandomGender();
+            }
         }).catch((error) => {
+            console.log(error);
             return error;
         })
     }
 
-    function updatePokemonGender(data) {
+    function updatePokemonGender() {
 
         const pokemonGender = document.querySelector('#pokemonGender');
-
-        const gender = data.name;
+    
         pokemonGender.innerText = gender;
+    }
+
+    function generateRandomGender() {
+        const genders = ['female', 'male'];
+
+        const randomIndex = Math.floor(Math.random() * genders.length);
+        gender = genders[randomIndex];
+        updatePokemonGender();
     }
 
     fetchPokemonDetails();
     generateRandomMood();
+    fetchPokemonGender(3);
 
 });
