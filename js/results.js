@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
     const pokemon = searchInput.slice(9, searchInput.length);
+    document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
     let gender = "";
 
     function generateRandomMood() {
