@@ -241,6 +241,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementsByTagName('head')[0].appendChild(link);
     }
 
+    window.addEventListener('resize', (event) => {
+        const resizeCol = document.querySelector('#resizeCol');
+        if (event.target.innerWidth <= 1215) {
+            resizeCol.classList.remove('is-one-third');
+        }
+
+        if (event.target.innerWidth > 1215) {
+            resizeCol.classList.add('is-one-third');
+        }
+    });
+
     fetchPokemonDetails();
     generateRandomMood();
     fetchPokemonGender(3);
