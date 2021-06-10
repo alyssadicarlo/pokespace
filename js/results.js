@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Base Att: ${pokemonData.stats[1].base_stat}
         Base Sp. Att: ${pokemonData.stats[3].base_stat}
         Base Spd: ${pokemonData.stats[5].base_stat}`;
-
+        updateIcon(pokemonData.id);
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
     }
@@ -230,6 +230,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomIndex = Math.floor(Math.random() * genders.length);
         gender = genders[randomIndex];
         updatePokemonGender();
+    }
+
+    function updateIcon(id) {
+        const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`;
+        document.getElementsByTagName('head')[0].appendChild(link);
     }
 
     fetchPokemonDetails();
