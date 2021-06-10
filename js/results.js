@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
-    const pokemon = searchInput.slice(9,searchInput.length);
+    const pokemon = searchInput.slice(9, searchInput.length);
     let gender = "";
 
     function generateRandomMood() {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pokemonMood = document.querySelector('#pokemonMood');
         pokemonMood.innerText = `Mood: ${listOfMoods[randomIndex]}`;
     }
-    
+
     function fetchPokemonDetails() {
         fetch(
             `https://pokeapi.co/api/v2/pokemon/${pokemon}`
@@ -50,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pokemonWeight.innerText = Math.round((pokemonData.weight / 4.536)) + ' lb';
         pokemonSpecies.innerText = `${pokemonData.species.name.slice(0,1).toUpperCase()}${pokemonData.species.name.slice(1, pokemonData.species.name.length)}`;
 
-        baseExperience.innerHTML = `Base Experience: ${pokemonData.base_experience}`;
+        baseExperience.innerHTML = `Base EXP: ${pokemonData.base_experience}</br>
+        Base HP: ${pokemonData.stats[0].base_stat}</br>
+        Base Def: ${pokemonData.stats[2].base_stat}</br>
+        Base Sp. Def: ${pokemonData.stats[4].base_stat}`;
 
         const abilities = pokemonData.abilities;
         const abilitiesSelectElement = document.querySelector('#pokemonAbilities');
@@ -73,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const movesSelectElement = document.querySelector('#pokemonMoves');
         const firstMoveElement = moves[0].move.url;
         fetchMoveStats(firstMoveElement);
-        
+
         moves.forEach((move) => {
             const optionElement = document.createElement('option');
             optionElement.value = move.move.url;
@@ -93,8 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomGameElement = document.querySelector('#pokemonRandomGame');
         randomGameElement.innerHTML = `Currently playing: Pokémon ${randomGame.slice(0,1).toUpperCase()}${randomGame.slice(1,randomGame.length)}`;
 
-        pokedexNumber.innerText = `Pokédex #: ${pokemonData.id}`;
-    
+        pokedexNumber.innerText = `Pokédex #: ${pokemonData.id}
+        Base Att: ${pokemonData.stats[1].base_stat}
+        Base Sp. Att: ${pokemonData.stats[3].base_stat}
+        Base Spd: ${pokemonData.stats[5].base_stat}`;
+
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
     }
@@ -195,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let genderlessPokemon = [];
 
             genderlessPokemonData.forEach((pokemon) => {
-            genderlessPokemon.push((pokemon.pokemon_species.name));
+                genderlessPokemon.push((pokemon.pokemon_species.name));
             });
 
             const isGenderless = genderlessPokemon.includes(pokemon);
@@ -214,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updatePokemonGender() {
 
         const pokemonGender = document.querySelector('#pokemonGender');
-    
+
         pokemonGender.innerText = gender;
     }
 
