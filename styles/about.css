@@ -1,5 +1,5 @@
 * {
-    font-size: 16px;
+    font-size: 100%;
     box-sizing: border-box;
 }
 
@@ -7,78 +7,170 @@ body {
     box-sizing: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+    background-image: url('../images/background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+#columns {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.media-content {
+    width: 100%;
 }
 
 .icon img {
-    max-height: 50px;
-    width: 50px;
-    height: 50px;
+    max-height: 3.125rem;
+    width: 3.125rem;
+    height: 3.125rem;
 }
 
-.home {
-    height: calc(100vh - 56px);
+header {
+    border-bottom: 1px solid black;
+}
+
+.navbar-burger {
+    width: 4.125rem;
+    height: 4.125rem;
+}
+
+.quote {
+    margin-top: 0.32rem;
+    margin-left: 0.32rem;
+    padding-left: 0.62rem;
+    border-left: 2px solid #dbdbdb;
+}
+
+main {
+    height: calc(100vh - 4.1875rem);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.home__randomContent {
-    max-width: 400px;
-    width: 90%;
-    margin-top: -50px;
-    margin-bottom: 50px;
+.team-section {
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.home img {
-    width: 100%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-
-.home input {
-    width: 100%;
-    padding: 10px;
-    margin: 0;
-}
-
-.home button {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.home form {
-    width: 90%;
+.card {
+    padding: 2.5rem;
+    border-radius: 0.625rem;
+    background: white;
+    margin: 1.25rem;
+    box-shadow: 0 0 10px 3px #4a4a4a;
+    -webkit-border-radius: 0.625rem;
+    -moz-border-radius: 0.625rem;
+    -ms-border-radius: 0.625rem;
+    -o-border-radius: 0.625rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    padding: 20px;
 }
 
-a:hover {
-    background-color: #aaa;
-    color: white;
+#active-page {
+    background-color: rgba(235, 235, 235, 0.5);
 }
 
-a:active {
-    background-color: #000;
-    color: white;
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: auto;
 }
 
-@media screen and (min-width: 436px) {
+#lead {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+figure {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 25%;
+    overflow: hidden;
+}
+
+#team {
+    width: auto;
+    height: 100%;
+}
+
+.absolute-icon {
+    margin: 0.3rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.19rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.card-content {
+    width: auto;
+    height: auto;
+    padding: 1%;
+}
+
+#info {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .main {
+        min-width: 25rem;
+    }
     .home form {
         flex-direction: row;
-        max-width: 600px;
+        max-width: 37.5rem;
     }
     .home .control {
-        width: calc(100% - 72.5px);
+        width: calc(100% - 4.53rem);
     }
     .home button {
-        margin-left: 10px;
+        margin-left: 0.625rem;
         margin-top: 0;
     }
 }

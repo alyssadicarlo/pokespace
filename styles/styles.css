@@ -18,8 +18,12 @@ body {
     height: 3.125rem;
 }
 
+#active-page {
+    background-color: rgba(235, 235, 235, 0.5);
+}
+
 header {
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 .navbar-burger {
@@ -63,34 +67,16 @@ main {
     margin-bottom: 2rem;
 }
 
-.home img {
-    width: 50%;
-    border-radius: 0.625rem;
-    -webkit-border-radius: 0.625rem;
-    -moz-border-radius: 0.625rem;
-    -ms-border-radius: 0.625rem;
-    -o-border-radius: 0.625rem;
-}
-
-.home input {
-    width: 100%;
-    padding: 0.625rem;
-    margin: 0;
-}
-
-.home button {
-    padding: 0.62rem;
-    margin-top: 0.625rem;
-}
-
 .home form {
     display: flex;
     flex-direction: column;
 }
 
 .loader {
-    border: 2px solid #f3f3f3; /* Light grey */
-    border-top: 2px solid #3498db; /* Blue */
+    border: 2px solid #f3f3f3;
+    /* Light grey */
+    border-top: 2px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
@@ -113,25 +99,25 @@ main {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (min-width: 500px) {
-
     .home__randomContent {
         min-width: 25rem;
     }
-
     .home form {
         flex-direction: row;
         max-width: 37.5rem;
     }
-
     .home .control {
         width: calc(100% - 4.53rem);
     }
-
     .home button {
         margin-left: 0.625rem;
         margin-top: 0;
