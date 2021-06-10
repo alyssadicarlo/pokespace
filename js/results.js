@@ -2,7 +2,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
-    const pokemon = searchInput.slice(9, searchInput.length);
+    const pokemon = searchInput.slice(9, searchInput.length).toLowerCase();
+    
+    if (pokemon === 'sean') {
+        window.location.href = "sean1.html";
+    } else if (pokemon === 'sam') {
+        window.location.href = "sam1.html";
+    } else if (pokemon === 'zach') {
+        window.location.href = "Zach1.html";
+    }
+    
     document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
     let gender = "";
 
@@ -104,6 +113,37 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIcon(pokemonData.id);
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
+        updatePokemonTypes(pokemonData.types);
+    }
+
+    function updatePokemonTypes(typesData) {
+        const pokemonCharacterisitics = document.querySelector('#pokemonCharacteristics');
+        typesData.forEach((type) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('hoverable_list__item');
+            const icon = document.createElement('img');
+            icon.src = "images/type.svg";
+            icon.alt = "type-icon";
+            icon.classList.add('characteristics__image');
+            const listTitle = document.createElement('span');
+            listTitle.classList.add('characteristics__large_text');
+            listTitle.innerHTML = '<strong>Type</strong>';
+            const typeElement = document.createElement('p');
+            typeElement.innerText = `${type.type.name.slice(0,1).toUpperCase()}${type.type.name.slice(1,type.type.name.length)}`;
+
+            listItem.append(icon);
+            listItem.append(listTitle);
+            listItem.append(typeElement);
+            pokemonCharacterisitics.append(listItem);
+        });
+
+        calculateHeight();
+    }
+
+    function calculateHeight() {
+        const column1 = document.querySelector('#column1');
+        const column2 = document.querySelector('#column2');
+        column2.style.minHeight = `${column1.offsetHeight}px`;
     }
 
     function fetchAbilityStats(url) {
@@ -252,8 +292,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    fetchPokemonDetails();
+    // 768 when switches to stacked
+
     generateRandomMood();
     fetchPokemonGender(3);
+    fetchPokemonDetails();
 
 });
