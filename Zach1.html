@@ -1,0 +1,1507 @@
+<script type="text/javascript">
+    var PokeSpaceClientContext = {
+        "UserId": ImageStore-1,
+        "DisplayFriendId": 6221,
+        "IsLoggedIn": false
+    };
+
+    MySpaceClientContext.PreferredCulture = 'en-US';
+</script>
+<div align="center">
+    <table width="800" cellspacing="0" cellpadding="0" border="0" bgcolor="#003399" align="center">
+        <tr>
+            <td>
+                <!-- Google: 472 -->
+                <div id="header_gae">
+                    <script type="text/javascript" language="JavaScript">
+                        function google_ad_request_done(google_ads) {
+                            var i = 0;
+                            if (google_ads == null || google_ads.length == 0) return;
+                            var ctl = null;
+                            var str = '';
+                            str = '';
+                            str += '<noscript>    <img height=1 width=1 border=0 src="https://web.archive.org/web/20071026042449/http://pagead2.googlesyndication.com/pagead/imp.gif?client=ca-fim_myspace_uvp_728x90&event=noscript"/> </noscript>';
+                            i++;
+                            document.write(str);
+                            var gafc = document.getElementById("gafc");
+                            if (gafc == null) return;
+                            gafc.className = gafc.className.replace("adcount4", "adcount" + google_ads.length);
+                        }
+                        var google_color_line = "ffffff";
+                        var google_adtest = "off";
+                        var google_kw = "";
+                        var google_language = "en";
+                        var google_ad_height = 90;
+                        var google_ad_width = 728;
+                        var google_ed = "::0:0:MGEwM2Q5NjVlM2UzZjcxMwh8zZV4dqWdEv-fy18IXlX6qbMF3h5KONabPsoBmkMnh4gTeRdCo9f1uTvNm6zl6enJuRysxB8yzI6Es7ThNORNwjwSXhYPPNvCFH7Q2fmb";
+                        var google_ad_output = "html";
+                        var google_color_border = "ffffff";
+                        var google_safe = "high";
+                        var google_ad_type = "text,image";
+                        var google_ad_channel = "fim_myspace_uvp,fim_myspace_united-states";
+                        var google_kw_type = "broad";
+                        var google_color_bg = "ffffff";
+                        var google_encoding = "utf8";
+                        var google_cust_ch = "";
+                        var google_ad_format = "728x90_pas_sln";
+                        var google_color_link = 003197;
+                        var google_color_url = 003197;
+                        var google_ad_client = "fim_myspace_uvp_728x90";
+                    </script>
+                    <script type="text/javascript" language="JavaScript" src="https://web.archive.org/web/20071026042449js_/http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                </div>
+                <script src="https://web.archive.org/web/20071026042449js_/http://creative.myspace.com/cms/js/ad_wrapper0050.js" type="text/javascript"></script>
+                <div class="clear"></div>
+                <div id="googlebar">
+                    <style>
+                        #header_gae {
+                            text-align: center;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        
+                        #profilelinks {
+                            padding-right: 25px;
+                        }
+                        
+                        #profilelinks select {
+                            visibility: visible !important;
+                            WIDTH: 125px;
+                        }
+                    </style>
+
+                    <div id="profilelinks"><select id="profileaction" onchange="shortCut(this);" name="profileaction"> <option value="-1" selected>User Shortcuts:</option> <option value="SendMessage">Send Message</option> <option value="ForwardToFriend">Forward to Friend</option> <option value="AddToFriends">Add to Friends</option> <option value="AddToFavorites">Add to Favorites</option> <option value="BlockUser">Block User</option> <option value="AddToGroup">Add to Group</option> <option value="RankUser">Rank User</option> <option value="InstantMessage">Instant Message</option></select>
+                        <script language="javascript">
+                            var profile_AddToFriends = '';
+
+                            function shortCut(ddl) {
+                                if (ddl == null) {
+                                    return;
+                                }
+                                if (!ddl.selectedIndex && !(ddl.selectedIndex > 0)) {
+                                    return;
+                                }
+                                var selectedVal = ddl.options[ddl.selectedIndex].value.toLowerCase();
+                                var sTargetUrl = '';
+                                var sFriendID = MySpace.ClientContext.DisplayFriendId;
+                                var myToken = MySpace.ClientContext.MyToken;
+                                var USERID_SAM = 6221;
+
+                                switch (selectedVal) {
+                                    case 'sendmessage':
+                                        if (sFriendID == USERID_SAM)
+                                            sTargetUrl = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=profile.mailTom&MyToken=' + myToken;
+                                        else
+                                            sTargetUrl = 'https://web.archive.org/web/20071026042449/http://messaging.myspace.com/index.cfm?fuseaction=mail.message&friendID=' + sFriendID + '&MyToken=' + myToken;
+                                        break;
+                                    case 'forwardtofriend':
+                                        sTargetUrl = 'https://web.archive.org/web/20071026042449/http://messaging.myspace.com/index.cfm?fuseaction=mail.forward&f=forwardprofile&friendID=' + sFriendID;
+
+                                        break;
+
+                                    case 'addtofriends':
+                                        if (profile_AddToFriends.length > 0)
+                                            sTargetUrl = profile_AddToFriends;
+                                        else
+                                            sTargetUrl = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=invite.addfriend_verify&friendID=' + sFriendID + '&MyToken=' + myToken;
+                                        break;
+
+                                    case 'addtofavorites':
+                                        sTargetUrl = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=user.addToFavorite&public=0&friendID=' + sFriendID;
+
+                                        break;
+
+                                    case 'blockuser':
+                                        if (confirm("Are you sure you want to block this user?\n- to block this user, hit OK\n- otherwise, hit Cancel"))
+                                            sTargetUrl = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=block.blockUser&userID=' + sFriendID;
+                                        else
+                                            return;
+                                        break;
+
+                                    case 'addtogroup':
+                                        sTargetUrl = 'https://web.archive.org/web/20071026042449/http://groups.myspace.com/index.cfm?fuseaction=groups.addtogroup&friendID=' + sFriendID;
+                                        break;
+
+                                    case 'rankuser':
+                                        sTargetUrl = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=RateImage.UserRating&UserID=' + sFriendID;
+                                        break;
+
+                                    case 'instantmessage':
+                                        shortCut_InstantMsg();
+                                        return;
+                                        break;
+
+                                    default:
+                                }
+                                //alert(selectedVal + '\n' + sTargetUrl);
+                                location.href = sTargetUrl;
+                            }
+                        </script>
+                    </div>
+                    <script language="javascript">
+                        profile_AddToFriends = 'https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=invite.addfriend_verify&friendID=6221&MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77';
+
+                        function shortCut_InstantMsg() {
+                            IsMySpaceIMInstalled();
+                        }
+                    </script>
+                    <style>
+                        #googlebar {
+                            margin-bottom: 6px;
+                            margin-top: 14px;
+                            padding-top: 0px;
+                        }
+                        
+                        #imgGoogle {
+                            BACKGROUND-IMAGE: url(https://web.archive.org/web/20071026042449im_/http://cms.myspacecdn.com/cms/Headers_and_Footers/googlelogo.png);
+                            BACKGROUND-REPEAT: no-repeat;
+                            _background-image: none;
+                        }
+                        
+                        #imgGoogle {
+                            FILTER: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='http://cms.myspacecdn.com/cms/Headers_and_Footers/googlelogo.png', sizingMethod='image');
+                            WIDTH: 92px;
+                            HEIGHT: 23px;
+                        }
+                        
+                        div#header_search select#t {
+                            vertical-align: bottom;
+                        }
+                    </style>
+
+                    <form id="srch" name="srch" onsubmit="return ($get('q').value.toString().trim().length > 0);" action="https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?advancedFind.hub" method="get"><input class="txt" id="q" style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 1px; WIDTH: 376px; PADDING-TOP: 1px" name="q"> <select id="t" style="WIDTH: 80px" name="t"> <option value="tms" selected>MySpace</option> <option value="tweb">Web</option> <option value="tpeople">People</option> <option value="tmusic">Music</option> <option value="tvid">Video</option></select>                        <input id="submitBtn" style="FONT-SIZE: 12px" type="submit" value="Search"> <img class="googleLogo" id="imgGoogle" style="MARGIN: -4px 2px 0px; VERTICAL-ALIGN: middle" alt="Powered" by google src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/spacer.gif">                        <input type="hidden" value="advancedFind.hub" name="fuseaction"> </form>
+                </div>
+                <div class="clear"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div align="center">
+    <table border="0" cellspacing="0" cellpadding="0" width="800" class="navigationBar">
+        <tr>
+            <td width="800" height="26" bgcolor="6698CB">
+                <table width="800" height="26" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="middle">
+                        <td align="center">
+                            <!-- English nav -->
+                            <a class="navbar" id="headerhomelink" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fwww.myspace.com%2f" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/';return true;"
+                                onmouseout="window.status='';">Home</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fbrowseusers.myspace.com%2fBrowse%2fBrowse.aspx%3fz%3d1"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://browseusers.myspace.com/Browse/Browse.aspx?z=1';return true;" onmouseout="window.status='';">Browse</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fsearch.myspace.com%2findex.cfm%3ffuseaction%3dfind"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?fuseaction=find';return true;" onmouseout="window.status='';">Search</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2finvites.myspace.com%2findex.cfm%3ffuseaction%3dinvite"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://invites.myspace.com/index.cfm?fuseaction=invite';return true;" onmouseout="window.status='';">Invite</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2ffilm.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://film.myspace.com/';return true;" onmouseout="window.status='';">Film</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fmessaging.myspace.com%2findex.cfm%3ffuseaction%3dmail.inbox"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://messaging.myspace.com/index.cfm?fuseaction=mail.inbox';return true;" onmouseout="window.status='';">Mail</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fblog.myspace.com%2findex.cfm%3ffuseaction%3dblog.controlcenter"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.controlcenter';return true;" onmouseout="window.status='';">Blogs</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2ffavorites.myspace.com%2findex.cfm%3ffuseaction%3duser.favorites"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://favorites.myspace.com/index.cfm?fuseaction=user.favorites';return true;" onmouseout="window.status='';">Favorites</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fforum.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://forum.myspace.com/';return true;" onmouseout="window.status='';">Forum</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fgroups.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://groups.myspace.com/';return true;" onmouseout="window.status='';">Groups</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fevents.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://events.myspace.com/';return true;" onmouseout="window.status='';">Events</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fvids.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://vids.myspace.com/';return true;" onmouseout="window.status='';">Videos</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fmusic.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://music.myspace.com/';return true;" onmouseout="window.status='';">Music</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fcomedy.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://comedy.myspace.com/';return true;" onmouseout="window.status='';">Comedy</a> | <a class="navbar" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=176efaa7-1908-488e-aa3e-2565dcf843d6&amp;_u=http%3a%2f%2fclassifieds.myspace.com%2f"
+                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://classifieds.myspace.com/';return true;" onmouseout="window.status='';">Classifieds</a>
+                            <script>
+                                if (MySpaceClientContext.IsLoggedIn == true) {
+                                    var hhlink = document.getElementById('headerhomelink');
+                                    hhlink.href = "https://web.archive.org/web/20071026042449/http://home.myspace.com/index.cfm?fuseaction=user";
+                                }
+                            </script>
+
+                            <style>
+                                #topnav {
+                                    background-color: #6698cb;
+                                }
+                                
+                                #adspacer {
+                                    height: 35px;
+                                    width: 1px;
+                                }
+                            </style>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="clear"></div>
+
+<link id="ctl00_Main_defaultProfileStyles" rel="stylesheet" type="text/css" href="https://web.archive.org/web/20071026042449cs_/http://x.myspace.com/modules/common/static/css/profile001.css"></link>
+
+<script type="text/javascript">
+    function viewerIsLoggedIn() {
+        return False;
+    }
+
+    function getDisplayFriendID() {
+        return 6221;
+    }
+
+    function currentUserIsFriend() {
+        return False;
+    }
+</script>
+
+
+
+<table width="800" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+        <td width="20" bgcolor="FFFFFF"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="2" border="0"></td>
+        <td width="780" align="center" bgcolor="FFFFFF">
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td width="275" height="33" align="center" valign="top" bgcolor="FFFFFF"><br/>
+
+
+                        <table height="100" cellspacing="0" cellpadding="0" width="300" border="0" class="profileInfo">
+                            <tr>
+                                <td class="text" valign="bottom" align="left" width="300" bgcolor="#ffffff" colspan="3" style="WORD-WRAP:break-word"><span class="nametext">Sam</span><br/>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table id="Table2" cellspacing="0" cellpadding="0" width="300" align="center">
+                                        <tr>
+                                            <td class="text" width="75" bgcolor="#ffffff" height="75">
+                                                <a type="text/javascript" id="ctl00_Main_ctl00_UserBasicInformation1_hlDefaultImage" href="https://web.archive.org/web/20071026042449/http://viewmorepics.myspace.com/index.cfm?fuseaction=user.viewAlbums&amp;friendID=6221"><img border="0" alt="" src="https://web.archive.org/web/20071026042449im_/http://b2.ac-images.myspacecdn.com/00000/20/52/2502_m.jpg" />
+                                                </a>
+                                                <td>
+                                                    <td width="15" height="75" bgcolor="#ffffff" class="text"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="8" border="0" alt=""></td>
+                                                </td>
+                                                <td class="text" width="193" bgcolor="#ffffff" height="75" align="left">":-)"<br>
+                                                    <br> Male
+                                                    <br> 32 years old
+                                                    <br> Married
+                                                    <br> Houston, Texas
+                                                    <br> United States
+                                                    <br>
+                                                    <br>
+
+
+
+                                                    <br/>
+
+                                                    <br> Last Login: 10/25/2007
+                                                    <br>
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" style="padding-left:3px;">
+                                                <b>Mood:</b> busy
+                                                <img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/blog/moods/iBrads/busy.gif" id="ctl00_Main_ctl00_UserBasicInformation1_moodImage" alt="Mood Image" />
+                                            </td>
+                                        </tr>
+                                        <tr valign="middle">
+                                            <td colspan="3" style="padding-left:3px;">
+                                                View My:
+                                                <a id="ctl00_Main_ctl00_UserBasicInformation1_ctrlViewMorePics" href="https://web.archive.org/web/20071026042449/http://viewmorepics.myspace.com/index.cfm?fuseaction=user.viewAlbums&amp;friendID=6221">Pics</a>                                                | <a href="https://web.archive.org/web/20071026042449/http://vids.myspace.com/index.cfm?fuseaction=vids.showvids&amp;friendID=6221&amp;n=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77">Videos</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </td>
+                            </tr>
+                        </table>
+                        <br>
+
+
+
+                        <table class="contactTable" border="1" cellspacing="0" cellpadding="0" width="300" bordercolor="#6699cc">
+                            <tr>
+                                <td width="300" height="15" bgcolor="#6699cc" class="text tdborder" align="left" style="WORD-WRAP:break-word">&nbsp;&nbsp;&nbsp;<span class="whitetext12">Contacting
+				Sam
+			</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdborder">
+                                    <table border="0" cellspacing="0" cellpadding="0" width="300" bordercolor="#000000">
+                                        <tr>
+                                            <td><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="1" height="5" border="0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="120" height="5" nowrap bgcolor="#ffffff" align="center" class="text">
+                                                <a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=profile.mailTom&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77" id="ctl00_Main_ctl00_UserContactLinks1_MailLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/mail_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                            <td width="15" height="5" bgcolor="#ffffff"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="8" border="0"></td>
+                                            <td width="150" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="https://web.archive.org/web/20071026042449/http://messaging.myspace.com/index.cfm?fuseaction=mail.forward&amp;friendID=6221&amp;f=forwardprofile" id="ctl00_Main_ctl00_UserContactLinks1_ForwardLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/forward_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="1" height="2" border="0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="130" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=invite.addfriend_verify&amp;friendID=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77" id="ctl00_Main_ctl00_UserContactLinks1_AddFriendLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/friend_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                            <td width="15" height="5" bgcolor="#ffffff"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="1" border="0" /></td>
+                                            <td width="150" nowrap height="2" bgcolor="#ffffff" align="center" class="text" valign="middle">
+                                                <a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=user.addToFavorite&amp;friendID=6221&amp;public=0" id="ctl00_Main_ctl00_UserContactLinks1_AddFavoriteLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/favorite_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="1" height="2" border="0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="130" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="javascript: IsMySpaceIMInstalled();" id="ctl00_Main_ctl00_UserContactLinks1_MessageFriendLink">
+                                                    <img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/im_1.gif" border="0" align="middle" />
+                                                </a>
+                                            </td>
+                                            <td width="15" height="5" bgcolor="#ffffff"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="8" border="0"></td>
+                                            <td width="150" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=block.blockUser&amp;userID=6221" id="ctl00_Main_ctl00_UserContactLinks1_BlockFriendLink" onclick="return confirm('Are you sure you want to block this user?\n- to block this user, hit OK\n- otherwise, hit Cancel');"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/block_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="1" height="2" border="0" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="130" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="https://web.archive.org/web/20071026042449/http://groups.myspace.com/index.cfm?fuseaction=groups.addtogroup&amp;friendID=6221" id="ctl00_Main_ctl00_UserContactLinks1_AddToGroupLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/group_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                            <td width="15" bgcolor="#ffffff">
+                                                <img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="15" height="1" border="0" />
+                                            </td>
+                                            <td width="150" nowrap height="5" bgcolor="#ffffff" align="center" class="text" valign="top">
+                                                <a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=RateImage.UserRating&amp;UserID=6221" id="ctl00_Main_ctl00_UserContactLinks1_RateFriendLink"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/profile/rank_1.gif" border="0" align="middle" /></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/clear.gif" width="1" height="5" border="0" /></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+
+
+
+                        <table class="userProfileURL" border="0" align="center" cellspacing="0" cellpadding="1" width="300">
+                            <tr>
+                                <td height="10" valign="top"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/1by1.gif" width="1" height="10"></td>
+                            </tr>
+                            <tr valign="top">
+                                <td bgcolor="#6699cc" align="center">
+                                    <table bgcolor="#ffffff" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr class="userProfileURL">
+                                            <td>
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                                                    <tr>
+                                                        <td width="70%">
+                                                            <div align="left"><strong>&nbsp;PokeSpace URL:&nbsp;</strong></div>
+                                                        </td>
+                                                        <td width="30%"></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr class="userProfileURL">
+                                            <td>
+                                                <div align="left">&nbsp;&nbsp;http://www.pokespace.com/sam&nbsp;&nbsp;</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="10" valign="top"><img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/1by1.gif" width="1" height="10"></td>
+                            </tr>
+                        </table>
+                        <br/>
+
+                        <script type="text/javascript" language="javascript">
+                            // <![CDATA[
+                            var s = "https://web.archive.org/web/20071026042449/http://lads.myspace.com/mini/mini.swf?b=ODAzMzY2MTI=&o=MzE5NzA0NA==&d=MTE5MzM3MzI4OQ==&i=NjIyMQ==&a=VHJ1ZQ==&u=LTE=";
+                            var so = new SWFObject(s, "mini", "295", "51", "8", "#ffffff");
+                            so.addParam("allowscriptaccess", "always");
+                            so.addVariable("culture", "en-US");
+                            so.write("mini");
+                            // ]]>
+                        </script>
+                        <br/><br/>
+
+
+                        <script type="text/javascript" language="JavaScript">
+                            siteURL = "https://web.archive.org/web/20071026042449/http://www.myspace.com/"
+                        </script>
+                        <script type="text/javascript" language="JavaScript" src="https://web.archive.org/web/20071026042449js_/http://x.myspace.com/js/highlightInterests2.js"></script>
+                        <table id="Table1" bordercolor="#6699cc" cellspacing="0" cellpadding="0" width="300" bgcolor="#ffffff" border="1" class="interestsAndDetails">
+                            <tr>
+                                <td class="text tdborder" valign="middle" align="left" width="300" bgcolor="#6699cc" wrap="" style="WORD-WRAP:break-word">&nbsp;&nbsp;&nbsp;
+                                    <span class="whitetext12">
+Sam's Interests
+			</span></td>
+                            </tr>
+                            <tr valign="top">
+                                <td class="tdborder">
+                                    <table id="Table2" bordercolor="#000000" cellspacing="3" cellpadding="3" width="300" align="center" bgcolor="#ffffff" border="0">
+                                        <tr id="GeneralRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">General</span></td>
+                                            <td id="ProfileGeneral" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Internet, Movies, Reading, Karaoke, Language, Coding, History of Coding, Coding, Singing/Writing Code & Coding<br><br></td>
+                                        </tr>
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileGeneral");
+                                        </script>
+                                        <tr id="MusicRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">Music</span></td>
+                                            <td id="ProfileMusic" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word"><b>Bands</b>: Dad Rock
+                                                <p>
+                                                    <b>Solo Artists</b>: Dad Rock
+                                                    <p>
+                                                        <b>Singers</b>: Michael Jackson (age 14 &amp; under), Karen Carpenter, Whitney Houston (particularly The Bodyguard soundtrack), George Michael, Louie Louie, Robin Zander, Frank Sinatra, Steve Perry,
+                                                        Gerard Way, Kelly Clarkson
+
+                                                                <b>Instruments</b>: The Harp, and a little Cello
+                                                                <p>
+                                                               
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileMusic");
+                                        </script>
+                                        <tr id="MoviesRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">Movies</span></td>
+                                            <td id="ProfileMovies" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word"><b>Films</b>: Lawrence of Arabia, Ben Hur, Patton, Spartacus, Gandhi, The 10 Commandments, Apocalypse Now, Beauty &amp; The Beast (the cartoon), Thin Red Line, Titanic, Gladiator, The Patriot, Breakfast at Tiffanys,
+                                                Un Coeur en Hiver, The Empire of the Sun, Gone With the Wind, The Godfather, 2001, Clockwork Orange, Blade Runner, Deer Hunter, Mean Streets, Grease, Urban Cowboy, Saturday Night Fever, The Sound of Music,
+                                                Copland, Dances With Wolves, Good Will Hunting<br><br><b>Directors</b>: Kubrick, Francis Copolla, Steven Spielberg</td>
+                                        </tr>
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileMovies");
+                                        </script>
+                                        <tr id="TelevisionRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">Favorite Shows</span></td>
+                                            <td id="ProfileTelevision" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word"> Monster, Derry Girls, Haikyu</td>
+                                        </tr>
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileTelevision");
+                                        </script>
+                                        <tr id="BooksRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">Books</span></td>
+                                            <td id="ProfileBooks" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Dispossesed, Left Hand of Darkness & The Broken Earth trilogy</td>
+                                        </tr>
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileBooks");
+                                        </script>
+                                        <tr id="HeroesRow">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0" nowrap><span class="lightbluetext8">Heroes</span></td>
+                                            <td id="ProfileHeroes" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">None
+                                            </td>
+                                        </tr>
+                                        <script language="JavaScript">
+                                            highlightInterests("ProfileHeroes");
+                                        </script>
+
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+
+
+
+
+                        <table class="userProfileDetail" bordercolor="#6699cc" cellspacing="0" cellpadding="0" width="300" bgcolor="#ffffff" border="1">
+                            <tr>
+                                <td class="text tdborder" valign="center" align="left" width="300" bgcolor="#6699cc" wrap="" style="WORD-WRAP:break-word">&nbsp;&nbsp;&nbsp;
+                                    <span class="whitetext12">&nbsp;Tom's Details</span>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td class="tdborder">
+                                    <table bordercolor="000000" cellspacing="3" cellpadding="3" width="300" align="center" bgcolor="ffffff" border="0">
+                                        <tr>
+                                            <td><span class="text"><tr id="Status:Row"><td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Status:</span></td>
+                                            <td id="ProfileStatus:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Married</td>
+                                        </tr>
+                                        <tr id="Here" for:row>
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Here for:</span></td>
+                                            <td id="ProfileHere for:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Friends</td>
+                                        </tr>
+                                        <tr id="Hometown:Row">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Hometown:</span></td>
+                                            <td id="ProfileHometown:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Houston, TX</td>
+                                        </tr>
+                                        <tr id="Ethnicity:Row">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Ethnicity:</span></td>
+                                            <td id="ProfileEthnicity:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">White / Caucasian</td>
+                                        </tr>
+                                        <tr id="Zodiac" sign:row>
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Zodiac Sign:</span></td>
+                                            <td id="ProfileZodiac Sign:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word"><a href="https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=horoscope&amp;sign=7&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77">Taurus</a></td>
+                                        </tr>
+                                        <tr id="Smoke" drink:row>
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Smoke / Drink:</span></td>
+                                            <td id="ProfileSmoke / Drink:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">No / No</td>
+                                        </tr>
+                                        <tr id="Education:Row">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Education:</span></td>
+                                            <td id="ProfileEducation:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">Grad / professional school</td>
+                                        </tr>
+                                        <tr id="Occupation:Row">
+                                            <td valign="top" align="left" width="100" bgcolor="#b1d0f0"><span class="lightbluetext8 label">Occupation:</span></td>
+                                            <td id="ProfileOccupation:" width="175" bgcolor="#d5e8fb" style="WORD-WRAP: break-word">DigitalCraft TA</td>
+                                        </tr>
+                                        </span>
+                                </td>
+                            </tr>
+                            </table>
+                            </td>
+                </tr>
+                </table><br/>
+
+
+
+                <table class="userProfileSchool" bordercolor="#6699cc" cellspacing="0" cellpadding="0" width="300" border="1">
+                    <tr>
+                        <td class="text tdborder" valign="middle" align="left" width="300" bgcolor="#6699cc" height="10" wrap="" style="WORD-WRAP:break-word">
+                            &nbsp;&nbsp;&nbsp;<span class="whitetext12">Sam's Schools</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdborder">
+                            <table bordercolor="#000000" cellspacing="3" cellpadding="3" width="300" align="center" border="0">
+
+                                <tr>
+                                    <td valign="top" align="left" width="240" bgcolor="b1d0f0">
+                                        <a href="https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?fuseaction=find&amp;circuitaction=search&amp;searchType=network&amp;f_first_name=&amp;InterestType=SCH&amp;f_search_criteria=311&amp;x=46&amp;y=12">
+									DigitalCraft </a
+                                        <br> Houston, TX
+                                        <br> Graduated:&nbsp;
+                                        <a href="https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?fuseaction=find&amp;circuitaction=search&amp;searchType=network&amp;f_first_name=&amp;InterestType=SCH-REF&amp;f_search_criteria=311&amp;x=46&amp;y=12&amp;YearType=graduated&amp;GradYear=2000"
+                                            id="ctl00_Main_ctl00_UserSchoolDisplay1_SchoolRepeater_ctl00_linkGraduated" title="2000">2000</a>
+                                        <br> Student status: Alumni<br/> Major: Film - Critical Studies<br/> &nbsp;
+                                        <a id="ctl00_Main_ctl00_UserSchoolDisplay1_SchoolRepeater_ctl00_ctrlGreekLink"></a><br/>
+
+
+                                        <br>
+                                    </td>
+                                    <td valign="top" align="middle" width="60" bgcolor="d5e8fb">1999 to 2001</td>
+                                </tr>
+
+                                <tr>
+                                    <td valign="top" align="left" width="240" bgcolor="b1d0f0">
+                                        <a href="https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?fuseaction=find&amp;circuitaction=search&amp;searchType=network&amp;f_first_name=&amp;InterestType=SCH&amp;f_search_criteria=308&amp;x=46&amp;y=12">
+									University Of Houston</a>
+                                        <br> Houston, TX; Atlanta, GA
+                                        <br> Instructor:&nbsp;
+                                        <a href="https://web.archive.org/web/20071026042449/http://search.myspace.com/index.cfm?fuseaction=find&amp;circuitaction=search&amp;searchType=network&amp;f_first_name=&amp;InterestType=SCH-REF&amp;f_search_criteria=308&amp;x=46&amp;y=12&amp;YearType=graduated&amp;GradYear=1998"
+                                            id="ctl00_Main_ctl00_UserSchoolDisplay1_SchoolRepeater_ctl01_linkGraduated" title="1998">1998</a>
+                                        <br> Student status: Alumni<br/> Major: Coding &amp; Rhetoric<br/> DC: Focus: Python, JavaScript, Html<br/> &nbsp;
+                                        <a id="ctl00_Main_ctl00_UserSchoolDisplay1_SchoolRepeater_ctl01_ctrlGreekLink"></a><br/>
+
+
+                                        <br>
+                                    </td>
+                                    <td valign="top" align="middle" width="60" bgcolor="d5e8fb">1994 to 1998</td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+
+
+
+                </td>
+                <td valign="top" align="center" width="15" bgcolor="#ffffff"><img id="ctl00_Main_ctl00_Img2" height="1" width="20" border="0" /></td>
+                <td class="text" valign="top" align="center" width="435" bgcolor="#ffffff">
+                    <br/>
+
+
+
+
+                    <table id="Table1" bordercolor="#000000" height="75" cellspacing="0" cellpadding="0" width="435" border="1" class="extendedNetwork">
+                        <tr>
+                            <td class="tdborder" valign="middle" align="center" width="435" style="word-wrap: break-word">
+                                <span class="blacktext12">
+					<span id="ctl00_Main_ctl00_UserNetwork1_ctrlMessage">Sam is reviewing DigitalCraft projects! :) </span>
+                                <br>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br/>
+
+
+
+                    <table bordercolor="000000" cellspacing="3" cellpadding="0" width="435" align="center" bgcolor="ffffff" border="0" class="latestBlogEntry">
+                        <tr>
+                            <td width="435" style="word-wrap:break-word"><span class="btext">Sam's Latest Blog Entry&nbsp;</span>[<a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.ConfirmSubscribe&amp;friendID=6221">Subscribe to this Blog</a>]<br/><br/></td>
+                        </tr>
+
+
+                        <tr valign="top">
+                            <td width="435" style="word-wrap:break-word">
+                                <span class="text">PokeSpace updates!</span>&nbsp; (
+                                <a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.view&amp;friendID=6221&amp;blogID=313961676">view more</a>)
+                                <br/><br/>
+                            </td>
+                        </tr>
+
+
+                        <tr valign="top">
+                            <td width="435" style="word-wrap:break-word">
+                                <span class="text">new homepage look</span>&nbsp; (
+                                <a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.view&amp;friendID=6221&amp;blogID=309490335">view more</a>)
+                                <br/><br/>
+                            </td>
+                        </tr>
+
+
+                        <tr valign="top">
+                            <td width="435" style="word-wrap:break-word">
+                                <span class="text">what’s going on with friend counts?</span>&nbsp; (
+                                <a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.view&amp;friendID=6221&amp;blogID=304116455">view more</a>)
+                                <br/><br/>
+                            </td>
+                        </tr>
+
+
+                        <tr valign="top">
+                            <td width="435" style="word-wrap:break-word">
+                                <span class="text">extended network</span>&nbsp; (
+                                <a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.view&amp;friendID=6221&amp;blogID=287450663">view more</a>)
+                                <br/><br/>
+                            </td>
+                        </tr>
+
+
+                        <tr valign="top">
+                            <td width="435" style="word-wrap:break-word">
+                                <span class="text">am i online?</span>&nbsp; (
+                                <a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.view&amp;friendID=6221&amp;blogID=283201758">view more</a>)
+                                <br/><br/>
+                            </td>
+                        </tr>
+
+
+
+
+                        <tr>
+                            <td valign="top" align="left" bgcolor="ffffff" height="25">[<a href="https://web.archive.org/web/20071026042449/http://blog.myspace.com/index.cfm?fuseaction=blog.ListAll&amp;friendID=6221">View All Blog Entries</a>]</td>
+                        </tr>
+                    </table><br>
+
+
+                    <table bordercolor="ffcc99" cellspacing="0" cellpadding="0" width="435" bgcolor="ffcc99" border="0" class="blurbs">
+                        <tr>
+                            <td class="text" valign="center" align="left" width="300" bgcolor="ffcc99" height="17" wrap="" style="word-wrap: break-word">
+                                &nbsp;&nbsp;&nbsp;<span class="orangetext15">Sam's Blurbs</span></td>S
+                        </tr>
+                        <tr>
+                            <td>
+                                <table bordercolor="000000" cellspacing="3" cellpadding="3" width="435" align="center" bgcolor="ffffff" border="0">
+                                    <tr>
+                                        <td valign="top" align="left" width="435" bgcolor="#ffffff" style="word-wrap: break-word">
+                                            <span class="orangetext15">
+							About me:</span><br/>
+                                            <span class="text">I'm Sam and I'm here to help you. Send me a message if you're confused by anything, or come to office hours. 
+
+<font size="1" color="green"><b>Before asking me a question, please check the <a href="https://web.archive.org/web/20071026042449/http://www.myspace.com/Modules/Help/Pages/HelpCenter.aspx" target="_new">FAQ</a> to see if your question has already been answered.</b></font> <br><br>
+
+I may have been on your friend list when you signed up. If you don't want me to be, click "Edit Friends" and remove me!  <br><br><b>Also, feel free to ask me for assistance with your coding projects and assignments. You can do it!</b><br><br>
+
+</style></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" align="left" width="435" bgcolor="#ffffff" style="word-wrap: break-word">
+                                            <span class="orangetext15">
+							Who I'd like to meet:</span><br/>
+                                            <span class="text">I'd like to meet Alyssa, Otis and Josh. Those guys are great. Honestly, they're my favorite students. Like my other students are cool, but not as cool as them. Yup! Tough cookies for the rest of you all. <br>
+<br>
+</style></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+
+
+                    <script type="text/javascript" language="javascript">
+                        // <![CDATA[
+                        var cacheVerify = "from cache"
+                        var s = "https://web.archive.org/web/20071026042449/http://lads.myspace.com/videos/vplayer.swf";
+                        var so = new SWFObject(s, "vplayer", "430", "403", "8", "#ffffff");
+                        so.addVariable("userid", "6221");
+                        so.addVariable("m", "3902476");
+                        so.addVariable("remove", "0");
+                        so.addVariable("showmenus", "1");
+                        so.addVariable("t", "");
+
+                        so.addVariable("culture", "en-US");
+                        so.addParam("wmode", "transparent");
+                        so.addParam("allowscriptaccess", "always");
+                        so.write("vplayer");
+                        // ]]>
+                    </script>
+                    <br/><br/>
+
+
+
+                    <table bordercolor="000000" cellspacing="0" cellpadding="0" width="435" border="0" class="friendSpace">
+                        <tr>
+                            <td align="left" width="435" bgcolor="ffffff" height="20">
+                                <table height="20" cellspacing="0" cellpadding="0" width="435" bgcolor="ffcc99">
+                                    <tr>
+                                        <td width="435" style="word-wrap:break-word">&nbsp;&nbsp;&nbsp;<span class="orangetext15">Tom's Friend Space</span></td>
+                                    </tr>
+                                </table>
+                                <table cellspacing="0" cellpadding="5" width="435" align="center" border="0">
+                                    <tr>
+                                        <td bgcolor="ffffff" colspan="4" width="435" style="word-wrap:break-word"><span class="btext">Tom has&nbsp;<span class="redbtext">206581160</span>&nbsp;friends.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span id="ctl00_Main_ctl00_UserFriends1_TomsProfile"><!-- CMS:d34fb9ea-8161-4c2d-81b0-d98fdc5254b9:20071003.1 -->
+<!-- CMS Placement ID = "TomsFriends" -->
+<table cellspacing="0" cellpadding="5" width="435" align="center" border="0">
+<tbody>
+<tr>
+<td valign="top" align="middle" width="1" bgcolor="#ffffff">
+<table cellspacing="0" align="center" border="0">
+<tbody>
+<tr>
+<td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff"> <a id="FriendLink_1" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d127946402" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=127946402';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_1">AT&T;</span></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                            <a id="FriendLink_1" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d127946402"
+                                                onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=127946402';return true;" onmouseout="window.status='';"><img id="FriendImage_1" src="https://web.archive.org/web/20071026042449im_/http://creative.myspace.com/cms/TomsProfile/Toms_Friends/att.png"></a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_2" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d189042058"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=189042058';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_2">presidential dialogues</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_2" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d189042058"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=189042058';return true;" onmouseout="window.status='';"><img id="FriendImage_2" src="https://web.archive.org/web/20071026042449im_/http://a84.ac-images.myspacecdn.com/images01/118/s_96a4bf6671dab87668cebf74181a828b.gif"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_3" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d187754203"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=187754203';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_3">Find Madeline</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_3" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d187754203"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=187754203';return true;" onmouseout="window.status='';"><img id="FriendImage_3" src="https://web.archive.org/web/20071026042449im_/http://a726.ac-images.myspacecdn.com/images01/23/s_ccbaaa210020b85077e8020f902a7605.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_4" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewProfile%26friendID%3d30920517"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewProfile&amp;friendID=30920517';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_4">Mickey Avalon</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_4" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewProfile%26friendID%3d30920517"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewProfile&amp;friendID=30920517';return true;" onmouseout="window.status='';"><img id="FriendImage_4" src="https://web.archive.org/web/20071026042449im_/http://myspace-764.vo.llnwd.net/00512/46/76/512786764_s.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_5" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d1217516"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=1217516';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_5">Sherwood</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_5" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d1217516"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=1217516';return true;" onmouseout="window.status='';"><img id="FriendImage_5" src="https://web.archive.org/web/20071026042449im_/http://a570.ac-images.myspacecdn.com/images01/33/s_922b153d277a440ba7b932e3aacf7ec9.gif"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_6" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d45761868"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=45761868';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_6">SNOCAP</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_6" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d45761868"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=45761868';return true;" onmouseout="window.status='';"><img id="FriendImage_6" src="https://web.archive.org/web/20071026042449im_/http://myspace-979.vo.llnwd.net/01135/97/95/1135285979_s.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_7" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d74388"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=74388';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_7">WHITEMENACE</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_7" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d74388"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=74388';return true;" onmouseout="window.status='';"><img id="FriendImage_7" src="https://web.archive.org/web/20071026042449im_/http://a380.ac-images.myspacecdn.com/images01/93/s_9327f01fb27b42c371694d7f5ee3f0f3.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_8" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewProfile%26friendID%3d32988795"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewProfile&amp;friendID=32988795';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_8">MySpace Records</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_8" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewProfile%26friendID%3d32988795"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewProfile&amp;friendID=32988795';return true;" onmouseout="window.status='';"><img id="FriendImage_8" src="https://web.archive.org/web/20071026042449im_/http://myspace-775.vo.llnwd.net/01283/57/78/1283988775_s.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_9" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d5715142"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=5715142';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_9">Kate Voegele</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_9" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d5715142"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=5715142';return true;" onmouseout="window.status='';"><img id="FriendImage_9" src="https://web.archive.org/web/20071026042449im_/http://a33.ac-images.myspacecdn.com/images01/50/s_2ce306fca6f233f851debb8466b7cda8.gif"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_10" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d189562827"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=189562827';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_10">Kyle XY T.. </span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_10" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d189562827"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=189562827';return true;" onmouseout="window.status='';"><img id="FriendImage_10" src="https://web.archive.org/web/20071026042449im_/http://a524.ac-images.myspacecdn.com/images01/44/s_561959a6fc6c9d083bae171eebac3683.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_11" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d153391934"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=153391934';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_11">DrDrew</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_11" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d153391934"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=153391934';return true;" onmouseout="window.status='';"><img id="FriendImage_11" src="https://web.archive.org/web/20071026042449im_/http://a144.ac-images.myspacecdn.com/images01/31/s_4ed4d37e02fdd7305863d105e8be8327.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_12" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d17659129"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=17659129';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_12">Stryker</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_12" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d17659129"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=17659129';return true;" onmouseout="window.status='';"><img id="FriendImage_12" src="https://web.archive.org/web/20071026042449im_/http://a730.ac-images.myspacecdn.com/01463/92/75/1463615729_s.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_13" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d11797991"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=11797991';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_13">Nico Vega</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_13" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d11797991"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=11797991';return true;" onmouseout="window.status='';"><img id="FriendImage_13" src="https://web.archive.org/web/20071026042449im_/http://a225.ac-images.myspacecdn.com/images01/56/s_a6e502ea7b4791f0fb7f8823e9c842b8.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_14" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d229892312"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=229892312';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_14">Polysics</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_14" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d229892312"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=229892312';return true;" onmouseout="window.status='';"><img id="FriendImage_14" src="https://web.archive.org/web/20071026042449im_/http://a431.ac-images.myspacecdn.com/images01/105/s_69a77e8cbffdbe76455a842f5f4b84c6.gif"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_15" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d235907325"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=235907325';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_15">MySpace Music Tour</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_15" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d235907325"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=235907325';return true;" onmouseout="window.status='';"><img id="FriendImage_15" src="https://web.archive.org/web/20071026042449im_/http://a356.ac-images.myspacecdn.com/images01/65/s_d8703572d1e25eca101b100d8ab2263b.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td valign="top" align="middle" width="1" bgcolor="#ffffff">
+                                <table cellspacing="0" align="center" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td style="WORD-WRAP: break-word" valign="top" align="middle" width="107" bgcolor="#ffffff">
+                                                <a id="FriendLink_16" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d26544757"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=26544757';return true;" onmouseout="window.status='';"><span class="txtDkGrey" id="FriendName_16">OurPlanet</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="middle" width="25%" bgcolor="#ffffff">
+                                                <a id="FriendLink_16" href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=d34fb9ea-8161-4c2d-81b0-d98fdc5254b9&amp;_u=http%3a%2f%2fprofile.myspace.com%2findex.cfm%3ffuseaction%3duser.viewprofile%26friendid%3d26544757"
+                                                    onmouseover="window.status='https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=26544757';return true;" onmouseout="window.status='';"><img id="FriendImage_16" src="https://web.archive.org/web/20071026042449im_/http://a418.ac-images.myspacecdn.com/images01/7/s_105642e374158c2e039682bbe697cfc1.jpg"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- End CMS Content -->
+                    </span>
+                </td>
+    </tr>
+    <tr valign="center" align="right">
+
+        <td bgcolor="FFFFFF" colspan="4"><a href="https://web.archive.org/web/20071026042449/http://friends.myspace.com/index.cfm?fuseaction=user.viewfriends&amp;friendID=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77" class="redlink">View All of Tom's Friends</a><br/><br/></td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+</table>
+
+
+
+
+
+<style type="text/css">
+    .commentlinks a {
+        font-weight: normal;
+        font-size: 9px;
+    }
+</style>
+<script type="text/javascript">
+    function confirmDeleteComment() {
+        return confirm("Are you sure you want to delete this comment?");
+    }
+</script>
+
+<table bordercolor="000000" cellspacing="0" cellpadding="0" width="435" border="0" class="friendsComments">
+    <tr>
+        <td class="text" align="left" width="435" bgcolor="ffffff" height="20">
+            <table bordercolor="ffcc99" height="20" cellspacing="0" cellpadding="0" width="441" bgcolor="ffcc99" border="1">
+                <tr>
+                    <td width="441" style="word-wrap: break-word">
+                        <span class="orangetext15">
+                            Sam's Friends Comments
+                        </span>
+                    </td>
+                </tr>
+            </table>
+
+
+            <table bordercolor="000000" cellspacing="3" cellpadding="0" width="435" align="center" bgcolor="ffffff" border="0">
+
+                <tr>
+                    <td>
+                        <b>Displaying<span class="redtext"> 50 </span>of<span class="redtext"> 794595 </span>comments&nbsp;
+                           ( <a href="https://web.archive.org/web/20071026042449/http://comment.myspace.com/index.cfm?fuseaction=user.viewComments&amp;friendID=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77">View All</a> | <a href="https://web.archive.org/web/20071026042449/http://comment.myspace.com/index.cfm?fuseaction=user.viewProfile_commentForm&amp;friendID=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77">Add Comment</a> )
+                        </td>
+                    </tr>
+                
+                            <tr>
+                                <td bordercolor="ff9933" bgcolor="ffcccc">
+                                    <table width="100%" border="1" cellspacing="0" cellpadding="3" bordercolor="FFffff">
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=49032368">
+                                        Tiffany
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=49032368">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a761.ac-images.myspacecdn.com/images01/104/s_86366f38ea769393833919816bdfab50.jpg" border="0"/></a><br>
+                                       
+                                        
+
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Jun 14 2021 8:13 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    Hello Sam, we've been trying to reach you regarding your car's extended warranty.
+                                     This is your last chance...
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=10844269">
+                                        k r i s t i n [ iLY. AK ] ♡
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=10844269">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a943.ac-images.myspacecdn.com/images01/58/s_871bbb334fff663240e54b58b3190766.gif" border="0"/></a><br>
+                                                                           
+                                        
+
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 8:12 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    Hello SAM!<br/><br/>You rule!!!<br/><br/>G
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=170640330">
+                                        *§ÚMM£R*
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=170640330">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a20.ac-images.myspacecdn.com/images01/82/s_7235539d235b47c9627ed2e421e5ea9b.jpg" border="0"/></a><br>
+                                       
+                                        
+
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 8:12 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    you should think about new moods!<br/><br/>Love the new changes!
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=240925604">
+                                        FoX
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=240925604">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a270.ac-images.myspacecdn.com/images01/92/s_029bbc756e3df7603c88394317855f95.jpg" border="0"/></a><br>
+                                       
+                                        
+<img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/onlinenow.gif" width="80" height="20" alt="Is Online" class="ImgOnlineNow"/>                         
+
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 8:10 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    HAHAHA that was kind of random seeing your status.
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=106323231">
+                                        &copy; l u E l e S s
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=106323231">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a7.ac-images.myspacecdn.com/images01/38/s_c4d225a247354e633e6cf7fc4acc05de.jpg" border="0"/></a><br>
+                                       
+                                        
+<img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/onlinenow.gif" width="80" height="20" alt="Is Online" class="ImgOnlineNow"/>
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 8:10 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    SAM YOUR THE BEST...
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=39143809">
+                                        ER&iexcl;CA[&hearts;]
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=39143809">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a227.ac-images.myspacecdn.com/images01/110/s_4947d24303481f47a2b65c608c84363a.jpg" border="0"/></a><br>
+                                       
+                                        
+<img src="https://web.archive.org/web/20071026042449im_/http://x.myspace.com/images/onlinenow.gif" width="80" height="20" alt="Is Online" class="ImgOnlineNow"/>
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 8:10 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    love the new status feature! thanks!
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=208322298">
+                                        Nevets
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=208322298">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a23.ac-images.myspacecdn.com/images01/37/s_4cd7ba397dbcb03ab7dd9f6c9a51b186.jpg" border="0"/></a><br>
+                                       
+                                        
+<br>     
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 4:07 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    P O K E S P A C E rocks Sam keep it up.
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=101783542">
+                                        Wild Animal Sanctuary
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=101783542">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a923.ac-images.myspacecdn.com/images01/30/s_1e6d1f637eff8737459111a522bd5e7a.jpg" border="0"/></a><br>
+                                       
+                                        
+
+<br/>
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 4:04 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    You should invest in BlockBuster!
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td align="center" valign="top" width="150" bgcolor="FF9933" style="word-wrap: break-word">
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=207122444">
+                                        Jordan&hearts;
+                                    </a>
+                                    <br>
+                                    <br>
+                                    
+                                    <a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&amp;friendid=207122444">
+                                        <img src="https://web.archive.org/web/20071026042449im_/http://a909.ac-images.myspacecdn.com/images01/56/s_3bbebdc0941bb3f7cd29613ebed0bd0c.jpg" border="0"/></a><br>
+                                       
+                                        
+
+
+                                        
+                                    <br>
+                                    <br>
+                                </td>
+                                <td bgcolor="F9D6B4" align="left" valign="top" width="260" style="word-wrap: break-word">
+                                    <span class="blacktext10">
+                                        Oct 25 2007 3:55 PM
+                                    </span>
+																	
+                                    <br>
+                                    <br>
+                                    hey lovin the new pokespace but is there any chance you can add a box where you can change colours ant types of font when you are commenting our friends? thanks =D xxx
+                                </td>
+                            </tr>
+                        
+                            </table> </td> </tr> 
+                        
+                    <tr>
+            <td align="right">
+                <a href="https://web.archive.org/web/20071026042449/http://comment.myspace.com/index.cfm?fuseaction=user.viewProfile_commentForm&amp;friendID=6221&amp;MyToken=8411e4e4-dd21-4832-874b-f4ee5e44ed77">
+                Add Comment</a>
+            </td>
+        </tr>
+        </table> </td>
+    </tr>
+</table>
+
+<img id="ctl00_Main_ctl00_UserComments1_indimg" width="1" height="1"/>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+
+	
+    
+    <script type="text/javascript" src="https://web.archive.org/web/20071026042449js_/http://x.myspace.com/js/phs-006.js"></script>
+     <script type="text/javascript">
+        phscheck("Urgent Security Alert","<p><strong>Warning:</strong> You are submitting information to an outside site. This could be an attempt to steal your username and password.</p> <p>This is <strong>not</strong> a MySpace login page, please do not enter your MySpace login information (email address or password).</p> <p>Do you wish to continue your form submission?</p>","NO, CANCEL my button click","YES, I'll Continue Anyway","&raquo; Learn more about &quot;phishing&quot; &amp; your security");
+        window.setTimeout(changeTitle, 20);
+		function changeTitle()
+		{
+			document.title = "MySpace.com - Tom - 32 - Male - Santa Monica, CALIFORNIA - www.myspace.com/tom";
+		}
+     </script>
+    
+    
+<!-- Footer:Profiles Start -->
+<style type="text/css">
+         #tkn_leaderboard{visibility:visible !important; display:inline !important;}
+        body TABLE TD DIV#header_gae {     VISIBILITY: visible !important;}
+        
+        body DIV DIV select#profileaction{VISIBILITY: visible !important; display:inline !important; position:static; WIDTH: 125px;}
+        body DIV DIV DIV#profilelinks{ VISIBILITY: visible !important; display:inline !important; position:static; padding-right:15px; }
+        
+        body DIV TABLE TD DIV#googlebar 
+        {
+            VISIBILITY: visible !important;            
+            display:block !important;
+        }
+       
+         body DIV DIV form #q,
+         body DIV DIV form #t,
+         body DIV DIV form #submitBtn,
+         body DIV DIV form #imgGoogle         
+        {
+            VISIBILITY: visible !important; 
+            display:inline !important; 
+            position:static;
+        }
+
+	</style>
+
+<script type="text/javascript">var displayAbuseReportLink = true;</script>
+<style>a .text { font-weight: bold; font-family: Arial, Helvetica, sans-serif; }</style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr bgcolor="#e5e5e5" valign="top"><td><div align="center"><div align="center"><br/>
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dmisc.aboutus" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=misc.aboutus';return true;" onmouseout="window.status='';"><u>About</u></a> | 
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dmisc.faq" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=misc.faq';return true;" onmouseout="window.status='';"><u>FAQ</u></a> | 
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dmisc.terms" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=misc.terms';return true;" onmouseout="window.status='';"><u>Terms</u></a> | 
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dmisc.privacy" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=misc.privacy';return true;" onmouseout="window.status='';"><u>Privacy</u></a> | 
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dhelp.safetytips" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=help.safetytips';return true;" onmouseout="window.status='';"><u>Safety Tips</u></a> | 
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dmisc.contact" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=misc.contact';return true;" onmouseout="window.status='';"><u>Contact MySpace</u></a> | 
+
+<script type="text/javascript">
+if(displayAbuseReportLink == true)
+{
+document.write("<a hr" + "ef='https://web.archive.org/web/20071026042449/http://collect.myspace.com/index.cfm?fuseaction=misc.contactInput&ProfileContentID=" + MySpace.ClientContext.DisplayFriendId + "' target=\"_blank\" class=\"text\"><u>Report Abuse</u><" + "/a> | ");
+}
+</script>
+
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2fmodules%2fcommon%2fpages%2fsales.aspx" target="_blank" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/modules/common/pages/sales.aspx';return true;" onmouseout="window.status='';"><u>Advertise</u></a> |
+<a href="https://web.archive.org/web/20071026042449/http://profile.myspace.com/index.cfm?fuseaction=cms.goto&amp;_i=e391584a-fb5b-472e-8811-62c8af7d8e79&amp;_u=http%3a%2f%2fwww.myspace.com%2findex.cfm%3ffuseaction%3dInternationalMap" class="text" onmouseover="window.status='https://web.archive.org/web/20071026042449/http://www.myspace.com/index.cfm?fuseaction=InternationalMap';return true;" onmouseout="window.status='';"><u>MySpace International</u></a>
+
+<script type="text/javascript">
+var intlProfileVisibleStr = "False";
+intlProfileVisibleStr = intlProfileVisibleStr.toLowerCase();
+
+if(intlProfileVisibleStr == "true")
+{
+document.write("| <a href=\"http://www.myspace.com/myspaceusa\" class=\"text\" ><u>MySpace USA</u></a>");
+}
+</script>
+
+</div><br/><br/><font face="Arial, Helvetica, sans-serif" size="0">&copy;2003-2007 MySpace.com. All Rights Reserved.
+
+</font><img src="https://web.archive.org/web/20071026042449im_/http://nb.myspace.com/isf.gif"/></div></td></tr></table>
+<script src="https://web.archive.org/web/20071026042449js_/http://x.myspace.com/js/urchin001.js" type="text/javascript"></script>
+								<script type="text/javascript">
+								_uacct="UA-812293-1";
+								_udn="myspace.com";
+								urchinTracker("/en-US/UserViewProfile");</script><!-- Footer:Profiles End -->
+
+	<style type="text/css">
+		body, html {visibility:visible !important; display:block !important}
+	</style>
+	
+<script type="text/javascript" src="https://web.archive.org/web/20071026042449js_/http://x.myspace.com/modules/common/static/js/global006.js"></script>
+<script type="text/javascript" src="https://web.archive.org/web/20071026042449js_/http://x.myspace.com/modules/common/static/js/wddx.js"></script>
+
+	
+<iframe src="/web/20071026042449if_/http://myspace.com/Tom" name="onl450112277xyz102351524" id="onl450112277xyz102351524" style="border:0;width:0;height:0;"></iframe>
+<script type="text/javascript">
+	onlineNowInfoURL="https://web.archive.org/web/20071026042449/http://onlinenow.myspace.com/OnlineNow/UsersOnline.html";
+	javaScriptURL="https://web.archive.org/web/20071026042449/http://x.myspace.com";
+	ImageStore=new Array();
+	ImageStore[0]=new Object();
+	ImageStore[0].url="https://web.archive.org/web/20071026042449/http://i.myspace.com";
+	ImageStore[0].baseID=0;
+	clearImage=new Image();
+	clearImage.src="https://web.archive.org/web/20071026042449/http://i.myspace.com/site/images/clear.gif";
+	onlineNowImage=new Image();
+	onlineNowImage.src="https://web.archive.org/web/20071026042449/http://x.myspace.com/images/onlinenow.gif";		
+</script>
+<script type="text/javascript" defer="defer">
+	window.setTimeout("onlineNowNodeParser=new OnlineNowNodeParser(\"onl450112277xyz102351524\");onlineNowNodeParser.run();", 100);
+</script>
+
+	</body>
+</html>
