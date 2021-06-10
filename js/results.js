@@ -3,7 +3,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
     const pokemon = searchInput.slice(9, searchInput.length).toLowerCase();
-    
+    document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
+    let gender = "";
+    let pokemonList = [];
+
     if (pokemon === 'sean') {
         window.location.href = "sean1.html";
     } else if (pokemon === 'sam') {
@@ -11,9 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (pokemon === 'zach') {
         window.location.href = "Zach1.html";
     }
-    
-    document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
-    let gender = "";
+
+    function fetchPokemon() {
+        fetch(
+            `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            addPokemonToList(data);
+        });
+    }
+
+    function addPokemonToList(data) {
+        const pokemonData = data.results;
+        
+        pokemonData.forEach((item) => {
+            if (!item.name.includes("-")) {
+                pokemonList.push(item.name);
+            }
+        });
+
+        generateRandomFriends();
+    }
 
     function generateRandomMood() {
         const listOfMoods = ['Happy \n😊', 'Peachy \n😌', 'Sad \n😭', 'Romantic \n🥰', 'Reflective \n🤔', 'Cheerful \n😁', 'Shocked \n😮', 'Worried \n😰'];
@@ -281,6 +303,76 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementsByTagName('head')[0].appendChild(link);
     }
 
+    function fetchFriendInfo(friend, id) {
+        fetch(
+            `https://pokeapi.co/api/v2/pokemon/${friend}`
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            updateFriendInfo(data, id);
+        }).catch((error) => {
+            console.log(error);
+            return error;
+        })
+    }
+
+    function updateFriendInfo(data, id) {
+        const friendsElement = document.querySelector(`#pokemonFriend${id}`);
+        friendsElement.classList.remove('loader');
+
+        const friendElement = document.createElement('div');
+        friendElement.classList.add('text-center');
+
+        const friendNameElement = document.createElement('div');
+        friendNameElement.classList.add('friend_name');
+
+        const online_offline = ['online', 'offline'];
+
+        const onlineDiv = document.createElement('div');
+        onlineDiv.classList.add('online');
+
+        const offlineDiv = document.createElement('div');
+        offlineDiv.classList.add('offline');
+
+        const rand = Math.floor(Math.random() * online_offline.length);
+
+        if (rand === 0) {
+            friendNameElement.append(onlineDiv);
+        } else {
+            friendNameElement.append(offlineDiv);
+        }
+
+        const friendImage = document.createElement('img');
+        friendImage.classList.add('friend__image');
+
+        friendImage.src = data.sprites.front_default;
+
+        const friendName = document.createElement('span');
+        let name = data.name.replace("-"," ");
+        friendName.innerText = name;
+
+        friendNameElement.append(friendName);
+
+        friendElement.append(friendNameElement);
+        friendElement.append(friendImage);
+
+        friendsElement.append(friendElement);
+    }
+
+    function generateRandomFriends() {
+        const randIndex1 = Math.floor(Math.random() * pokemonList.length);
+        const randIndex2 = Math.floor(Math.random() * pokemonList.length);
+        const randIndex3 = Math.floor(Math.random() * pokemonList.length);
+
+        const friend1 = pokemonList[randIndex1];
+        const friend2 = pokemonList[randIndex2];
+        const friend3 = pokemonList[randIndex3];
+
+        fetchFriendInfo(friend1, 1);
+        fetchFriendInfo(friend2, 2);
+        fetchFriendInfo(friend3, 3);
+    }
+
     window.addEventListener('resize', (event) => {
         const resizeCol = document.querySelector('#resizeCol');
         if (event.target.innerWidth <= 1215) {
@@ -291,9 +383,8 @@ document.addEventListener('DOMContentLoaded', () => {
             resizeCol.classList.add('is-one-third');
         }
     });
-
-    // 768 when switches to stacked
-
+    
+    fetchPokemon();
     generateRandomMood();
     fetchPokemonGender(3);
     fetchPokemonDetails();
