@@ -61,9 +61,9 @@
                 <button class="button is-black" type="submit">Search</button>
             </div>
           </form>
-          <div class="columns mt-5">
-            <div class="column is-one-third">
-              <div class="card mb-6">
+          <div class="columns mt-5 mb-5">
+            <div id="column1" class="column is-one-third">
+              <div class="card mb-5">
                 <header class="card-header">
                   <p class="card-header-title">
                     Profile
@@ -72,7 +72,7 @@
                 <div class="card-content">
                   <div class="content">
                     <div class="columns">
-                      <div class="column">
+                      <div id="resizeCol" class="column is-one-third">
                         <div class="pokemon__image_wrapper">
                           <img id="pokemonImage" class="pokemon__image" alt="pokemon" />
                         </div>
@@ -88,6 +88,22 @@
                   </div>
                 </div>
               </div>
+              <div class="card mb-5">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Friends
+                  </p>
+                </header>
+                <div class="card-content no-padding">
+                  <div class="content">
+                    <div id="pokemonFriends" class="flex p-3">
+                      <div id="pokemonFriend1" class="loader"></div>
+                      <div id="pokemonFriend2" class="loader"></div>
+                      <div id="pokemonFriend3" class="loader"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="card">
                 <header class="card-header">
                   <p class="card-header-title">
@@ -96,7 +112,7 @@
                 </header>
                 <div class="card-content no-padding">
                   <div class="content">
-                    <ul class="hoverable_list">
+                    <ul id="pokemonCharacteristics" class="hoverable_list">
                       <li class="hoverable_list__item">
                         <img
                           src="images/height.svg"
@@ -142,8 +158,8 @@
                 </div>
               </div>
             </div>
-            <div class="column">
-              <div class="card">
+            <div id="column2" class="column">
+              <div style="height: 100%" class="card">
                 <header class="card-header">
                   <p class="card-header-title">
                     Statistics
@@ -187,9 +203,9 @@
           </div>
         </div>
       </main>
+      <script src="js/get_pokemon_list.js"></script>
       <script src="js/scripts.js"></script>
       <script src="js/results.js"></script>
-      <script src="js/get_pokemon_list.js"></script>
       <script src="js/homepage.js"></script>
   </body>
 </html>

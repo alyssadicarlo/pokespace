@@ -1,9 +1,11 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', () => {
     const datalist = document.querySelector('datalist');
     const searchInput = document.querySelector('#searchInput');
     let pokemon = [];
 
-    searchInput.addEventListener('keyup', (event) => {
+    searchInput.addEventListener('keyup', () => {
         if (searchInput.value) {
             datalist.id = "pokemonList";    		
         } else {
