@@ -7,20 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let gender = "";
     let pokemonList = [];
 
-    if (pokemon === 'sean') {
-        window.location.href = "sean.html";
-    } else if (pokemon === 'sam') {
-        window.location.href = "sam.html";
-    } else if (pokemon === 'zach') {
-        window.location.href = "zach.html";
-    } else if (pokemon == 'alyssa') {
-        window.location.href = "alyssa.html";
-    } else if (pokemon === 'otis') {
-        window.location.href = "otis.html";
-    } else if (pokemon === 'josh') {
-        window.location.href = "josh.html";
-    }
-
     function fetchPokemon() {
         fetch(
             `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
@@ -60,6 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((data) => {
             updatePokemonDetails(data);
         }).catch((error) => {
+            if (pokemon === 'sean') {
+                window.location.href = "sean.html";
+            } else if (pokemon === 'sam') {
+                window.location.href = "sam.html";
+            } else if (pokemon === 'zach') {
+                window.location.href = "zach.html";
+            } else if (pokemon == 'alyssa') {
+                window.location.href = "alyssa.html";
+            } else if (pokemon === 'otis') {
+                window.location.href = "otis.html";
+            } else if (pokemon === 'josh') {
+                window.location.href = "josh.html";
+            } else {
+                window.location.href = "404.html";
+            }
             console.log(error);
             return error;
         });
