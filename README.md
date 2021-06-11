@@ -79,6 +79,13 @@ open index.html
 - [PokéAPI](https://pokeapi.co/)
 - [Animechan](https://animechan.vercel.app/)
 
+## Collaborators
+
+- [Alyssa DiCarlo](https://github.com/alyssadicarlo)
+- [Otis](https://github.com/gtfotis)
+- [Josh Simon](https://github.com/joshsimon-bit)
+
+
 ## Credits
 
 [GBA Simulator](https://github.com/endrift/gbajs/)
