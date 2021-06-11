@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = "josh.html";
     }
 
+    if (!pokemonList.includes(pokemon)) {
+        window.location.href = "404.html";
+    }
+
     function fetchPokemon() {
         fetch(
             `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
@@ -60,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((data) => {
             updatePokemonDetails(data);
         }).catch((error) => {
-            window.location.href = "404.html";
             return error;
         });
     };
