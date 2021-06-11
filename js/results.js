@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let pokemonList = [];
 
     if (pokemon === 'sean') {
-        window.location.href = "sean1.html";
+        window.location.href = "sean.html";
     } else if (pokemon === 'sam') {
-        window.location.href = "sam1.html";
+        window.location.href = "sam.html";
     } else if (pokemon === 'zach') {
-        window.location.href = "Zach1.html";
+        window.location.href = "zach.html";
     } else if (pokemon == 'alyssa') {
         window.location.href = "alyssa.html";
     } else if (pokemon === 'otis') {
