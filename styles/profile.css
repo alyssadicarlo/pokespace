@@ -143,6 +143,10 @@ input {
     border-top: 2px solid black!important; /* Blue */
 }
 
+.about-me-wrapper * { 
+    padding: 16px;
+}
+
 @media screen and (min-width: 500px) {
     .button {
         width: auto;
