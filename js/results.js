@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        checkValid();
-
         generateRandomFriends();
     }
 
