@@ -14,6 +14,7 @@ This app was created as a group project in the DigitalCrafts May 2021 full stack
 - HTML5
 - CSS3
 - Vanilla JavaScript
+- [Bulma](https://bulma.io/)
 
 ## Features
 - Search for Pokémon
