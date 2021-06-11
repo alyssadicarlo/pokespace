@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = "sam1.html";
     } else if (pokemon === 'zach') {
         window.location.href = "Zach1.html";
+    } else if (pokemon == 'alyssa') {
+        window.location.href = "alyssa.html";
+    } else if (pokemon === 'otis') {
+        window.location.href = "otis.html";
+    } else if (pokemon === 'josh') {
+        window.location.href = "josh.html";
     }
 
     function fetchPokemon() {
