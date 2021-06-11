@@ -1,6 +1,6 @@
 body {
-    background: url('bg.png') no-repeat center, -webkit-linear-gradient(#765490 560px, #6A4883 620px, #433061 900px);
-    background: url('bg.png') no-repeat center, -moz-linear-gradient(#765490 560px, #6A4883 620px, #433061 900px, #433061);
+    background: url('bg2.png') no-repeat top center, -webkit-linear-gradient(#959595 560px, #505050 620px, #2f2f2f 900px);
+    background: url('bg2.png') no-repeat top center, -moz-linear-gradient(#959595 560px, #505050 620px, #2f2f2f 900px, #2f2f2f);
     text-align: center;
     margin: 0 0 15px;
     color: white;
@@ -11,7 +11,7 @@ button {
 }
 
 #screen {
-    margin-top: 280px;
+    margin-top: 80px;
     margin-bottom: 150px;
 }
 
@@ -35,8 +35,8 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-width: 0 1px;
     margin: 0 -5px 20px;
-    background: -webkit-linear-gradient(top, #8769A0, #9578B9 15%, #6A4883 50%, #433061);
-    background: -moz-linear-gradient(top, #8769A0, #9578B9 15%, #6A4883 50%, #433061);
+    background: -webkit-linear-gradient(top, #cacaca, #959595 15%, #505050 50%, #2f2f2f);
+    background: -moz-linear-gradient(top, #cacaca, #959595 15%, #505050 50%, #2f2f2f);
     box-shadow: 0 5px 4px -3px rgba(0, 0, 0, 0.6);
     position: absolute;
 }
@@ -45,12 +45,12 @@ button {
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-top: none;
-    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.9), 0 -40px 2px -1px #433061 inset;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.9), 0 -40px 2px -1px #505050 inset;
     width: 640px;
     margin: auto;
     height: 150px;
     overflow: hidden;
-    background-color: #765490;
+    background-color: #959595;
 }
 
 #controls>div {
@@ -69,11 +69,11 @@ button {
 }
 
 button {
-    background-color: #6A4883;
+    background-color: #505050;
     font-weight: bold;
     font-size: 18px;
     color: white;
-    text-shadow: 0 3px #433061;
+    text-shadow: 0 3px #2f2f2f;
     padding: 2px 10px 5px;
     border-radius: 0 0 10px 10px;
     border: 0 solid rgba(0, 0, 0, 0.4);
@@ -113,7 +113,6 @@ input[type=checkbox] {
 input[type=checkbox]::after {
     display: inline-block;
     content: "";
-    background-color: #765490;
     border: 0 solid rgba(0, 0, 0, 0.3);
     border-width: 1px 1px 2px;
     width: 12px;
@@ -125,7 +124,6 @@ input[type=checkbox]::after {
 }
 
 input[type=checkbox]:checked::after {
-    background-color: #6A4883;
     border-width: 2px 1px 1px;
     box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.2) inset;
 }
@@ -136,7 +134,7 @@ p:first-child {
 
 a:link,
 a:visited {
-    color: #fcb3f0;
+    color: white;
 }
 
 .hidden {
