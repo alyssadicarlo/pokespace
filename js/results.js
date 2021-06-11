@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((data) => {
             updatePokemonDetails(data);
         }).catch((error) => {
-            console.log(error);
+            window.location.href = "404.html";
             return error;
-        })
+        });
     };
 
     function updatePokemonDetails(data) {
