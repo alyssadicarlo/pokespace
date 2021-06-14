@@ -22,10 +22,6 @@ body {
     background-color: rgba(235, 235, 235, 0.5);
 }
 
-header {
-    /* border-bottom: 1px solid black; */
-}
-
 .navbar-burger {
     width: 4.125rem;
     height: 4.125rem;
@@ -74,13 +70,7 @@ main {
 
 .loader {
     border: 2px solid #f3f3f3;
-    /* Light grey */
-    border-top: 2px solid #3498db;
-    /* Blue */
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    animation: spin 2s linear infinite;
+    border-top: 2px solid black;
 }
 
 .absolute-icon {
@@ -96,15 +86,6 @@ main {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 @media screen and (min-width: 500px) {

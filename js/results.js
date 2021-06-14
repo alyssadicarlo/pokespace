@@ -2,9 +2,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = window.location.search;
-    const pokemon = searchInput.slice(9, searchInput.length);
+    const pokemon = searchInput.slice(9, searchInput.length).toLowerCase();
     document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
     let gender = "";
+    let pokemonList = [];    
+
+    function fetchPokemon() {
+        fetch(
+            `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            addPokemonToList(data);
+        });
+    }
+
+    function addPokemonToList(data) {
+        const pokemonData = data.results;
+        
+        pokemonData.forEach((item) => {
+            if (!item.name.includes("-")) {
+                pokemonList.push(item.name);
+            }
+        });
+
+        generateRandomFriends();
+    }
 
     function generateRandomMood() {
         const listOfMoods = ['Happy \n😊', 'Peachy \n😌', 'Sad \n😭', 'Romantic \n🥰', 'Reflective \n🤔', 'Cheerful \n😁', 'Shocked \n😮', 'Worried \n😰'];
@@ -23,9 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then((data) => {
             updatePokemonDetails(data);
         }).catch((error) => {
-            console.log(error);
+            if (pokemon === 'sean') {
+                window.location.href = "sean.html";
+            } else if (pokemon === 'sam') {
+                window.location.href = "sam.html";
+            } else if (pokemon === 'zach') {
+                window.location.href = "zach.html";
+            } else if (pokemon == 'alyssa') {
+                window.location.href = "alyssa.html";
+            } else if (pokemon === 'otis') {
+                window.location.href = "otis.html";
+            } else if (pokemon === 'josh') {
+                window.location.href = "josh.html";
+            } else if (error instanceof SyntaxError) {
+                window.location.href = "404.html";
+            } else {
+                console.log("DO NOTHING");
+            }
             return error;
-        })
+        });
     };
 
     function updatePokemonDetails(data) {
@@ -104,6 +143,37 @@ document.addEventListener('DOMContentLoaded', () => {
         updateIcon(pokemonData.id);
         fetchPokemonDescription(pokemonData.id);
         fetchPokemonSpeciesInfo(pokemonData.species.url);
+        updatePokemonTypes(pokemonData.types);
+    }
+
+    function updatePokemonTypes(typesData) {
+        const pokemonCharacterisitics = document.querySelector('#pokemonCharacteristics');
+        typesData.forEach((type) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('hoverable_list__item');
+            const icon = document.createElement('img');
+            icon.src = "images/type.svg";
+            icon.alt = "type-icon";
+            icon.classList.add('characteristics__image');
+            const listTitle = document.createElement('span');
+            listTitle.classList.add('characteristics__large_text');
+            listTitle.innerHTML = '<strong>Type</strong>';
+            const typeElement = document.createElement('p');
+            typeElement.innerText = `${type.type.name.slice(0,1).toUpperCase()}${type.type.name.slice(1,type.type.name.length)}`;
+
+            listItem.append(icon);
+            listItem.append(listTitle);
+            listItem.append(typeElement);
+            pokemonCharacterisitics.append(listItem);
+        });
+
+        calculateHeight();
+    }
+
+    function calculateHeight() {
+        const column1 = document.querySelector('#column1');
+        const column2 = document.querySelector('#column2');
+        column2.style.minHeight = `${column1.offsetHeight}px`;
     }
 
     function fetchAbilityStats(url) {
@@ -241,8 +311,94 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementsByTagName('head')[0].appendChild(link);
     }
 
-    fetchPokemonDetails();
+    function fetchFriendInfo(friend, id) {
+        fetch(
+            `https://pokeapi.co/api/v2/pokemon/${friend}`
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            updateFriendInfo(data, id);
+        }).catch((error) => {
+            console.log(error);
+            return error;
+        })
+    }
+
+    function updateFriendInfo(data, id) {
+        const friendsElement = document.querySelector(`#pokemonFriend${id}`);
+        friendsElement.classList.remove('loader');
+
+        const friendElement = document.createElement('div');
+        friendElement.classList.add('text-center');
+
+        const friendNameElement = document.createElement('div');
+        friendNameElement.classList.add('friend_name');
+
+        const online_offline = ['online', 'offline'];
+
+        const onlineDiv = document.createElement('div');
+        onlineDiv.classList.add('online');
+
+        const offlineDiv = document.createElement('div');
+        offlineDiv.classList.add('offline');
+
+        const rand = Math.floor(Math.random() * online_offline.length);
+
+        if (rand === 0) {
+            friendNameElement.append(onlineDiv);
+        } else {
+            friendNameElement.append(offlineDiv);
+        }
+
+        const friendImage = document.createElement('img');
+        friendImage.classList.add('friend__image');
+
+        friendImage.src = data.sprites.front_default;
+
+        const friendName = document.createElement('span');
+        let name = data.name.replace("-"," ");
+        friendName.innerText = name;
+
+        friendNameElement.append(friendName);
+
+        friendElement.append(friendNameElement);
+        friendElement.append(friendImage);
+
+        friendsElement.append(friendElement);
+
+        friendImage.addEventListener('click', () => {
+            window.location.href = `profile.html?pokemon=${name}`;
+        });
+    }
+
+    function generateRandomFriends() {
+        const randIndex1 = Math.floor(Math.random() * pokemonList.length);
+        const randIndex2 = Math.floor(Math.random() * pokemonList.length);
+        const randIndex3 = Math.floor(Math.random() * pokemonList.length);
+
+        const friend1 = pokemonList[randIndex1];
+        const friend2 = pokemonList[randIndex2];
+        const friend3 = pokemonList[randIndex3];
+
+        fetchFriendInfo(friend1, 1);
+        fetchFriendInfo(friend2, 2);
+        fetchFriendInfo(friend3, 3);
+    }
+
+    window.addEventListener('resize', (event) => {
+        const resizeCol = document.querySelector('#resizeCol');
+        if (event.target.innerWidth <= 1215) {
+            resizeCol.classList.remove('is-one-third');
+        }
+
+        if (event.target.innerWidth > 1215) {
+            resizeCol.classList.add('is-one-third');
+        }
+    });
+    
+    fetchPokemon();
     generateRandomMood();
     fetchPokemonGender(3);
+    fetchPokemonDetails();
 
 });
