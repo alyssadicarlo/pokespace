@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pokemon = searchInput.slice(9, searchInput.length).toLowerCase();
     document.title = `PokéSpace | ${pokemon.slice(0,1).toUpperCase()}${pokemon.slice(1,pokemon.length)}`;
     let gender = "";
-    let pokemonList = [];
-
-    const pokemonFriend1 = document.querySelector('#pokemonFriend1');
-    
+    let pokemonList = [];    
 
     function fetchPokemon() {
         fetch(
@@ -61,10 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = "otis.html";
             } else if (pokemon === 'josh') {
                 window.location.href = "josh.html";
-            } else {
+            } else if (error instanceof SyntaxError) {
                 window.location.href = "404.html";
+            } else {
+                console.log("DO NOTHING");
             }
-            console.log(error);
             return error;
         });
     };
