@@ -7,6 +7,10 @@ body {
     box-sizing: inherit;
 }
 
+#tomName {
+    font-size: 32px!important;
+}
+
 html {
     scroll-behavior: smooth;
     background-image: url('../images/background.jpeg');
@@ -18,6 +22,11 @@ html {
 
 .example::-webkit-scrollbar {
     display: none;
+}
+
+#tompic {
+    border-radius: 30px;
+    max-width: 250px;
 }
 
 #columns {
@@ -40,10 +49,6 @@ html {
     height: 3.125rem;
 }
 
-header {
-    border-bottom: 1px solid black;
-}
-
 .navbar-burger {
     width: 4.125rem;
     height: 4.125rem;
@@ -54,14 +59,6 @@ header {
     margin-left: 0.32rem;
     padding-left: 0.62rem;
     border-left: 2px solid #dbdbdb;
-}
-
-main {
-    height: calc(100vh - 4.1875rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .team-section {
@@ -95,7 +92,22 @@ main {
     align-items: center;
     flex-direction: column;
     padding: 20px;
-    margin-top: auto;
+}
+
+#pokeballcolumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+#pokeballcard {
+    width: auto;
+}
+
+#pokeball {
+    min-width: 30px;
+    max-width: 200px;
 }
 
 #lead {
@@ -113,28 +125,12 @@ figure {
     width: 100%;
     max-width: 400px;
     height: auto;
-    margin-top: 25%;
     overflow: hidden;
 }
 
 #team {
     width: auto;
     height: 100%;
-}
-
-.absolute-icon {
-    margin: 0.3rem;
-    width: 3.125rem;
-    height: 3.125rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0.19rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
 }
 
 .card-content {
@@ -172,5 +168,11 @@ figure {
     .home button {
         margin-left: 0.625rem;
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #pokeballcolumn {
+        flex-direction: column;
     }
 }
