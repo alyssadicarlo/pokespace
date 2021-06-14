@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let gender = "";
     let pokemonList = [];
 
+    const pokemonFriend1 = document.querySelector('#pokemonFriend1');
+    
+
     function fetchPokemon() {
         fetch(
             `https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118`
@@ -364,6 +367,10 @@ document.addEventListener('DOMContentLoaded', () => {
         friendElement.append(friendImage);
 
         friendsElement.append(friendElement);
+
+        friendImage.addEventListener('click', () => {
+            window.location.href = `profile.html?pokemon=${name}`;
+        });
     }
 
     function generateRandomFriends() {
