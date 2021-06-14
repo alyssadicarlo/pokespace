@@ -1,185 +1,174 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="styles/profile.css">
     <link rel="shortcut icon" type="image/png" href="images/pokeball.png" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="root">
-      <header>
-          <nav class="navbar" role="navigation" aria-label="main navigation">
-              <div class="navbar-brand">
-                  <a class="navbar-item" href="index.html">
-                      <div class="icon" id="randomImageDiv">
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <div class="icon" id="randomImageDiv">
 
-                      </div>
-                      <h1><strong>PokéSpace</strong></h1>
-                  </a>
+                        </div>
+                        <h1><strong>PokéSpace</strong></h1>
+                    </a>
 
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                  </a>
-              </div>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
 
-              <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-start">
-                      <a id='active-page' href="index.html" class="navbar-item">
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a id='active-page' href="index.html" class="navbar-item">
                     Home
                   </a>
 
-                      <a class="navbar-item" href="about.html">
+                        <a class="navbar-item" href="about.html">
                     About
                   </a>
 
-                      <a class="navbar-item" href="https://github.com/alyssadicarlo/pokespace/issues">
+                        <a class="navbar-item" href="https://github.com/alyssadicarlo/pokespace/issues">
                     Report an issue
                   </a>
 
-                  </div>
+                    </div>
 
-                  <div class="navbar-end">
+                    <div class="navbar-end">
 
-                  </div>
-              </div>
-          </nav>
-      </header>
-      <main>
-        <div class="container">
-          <p style="text-align: center;">Welcome to the Poké<span class="header__tag">Space</span></p>
-          <form action="profile.html" method="GET">
-            <div class="form-flex">
-                <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
-                <datalist>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <p style="text-align: center;">Welcome to the Poké<span class="header__tag">Space</span></p>
+                <form action="profile.html" method="GET">
+                    <div class="form-flex">
+                        <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
+                        <datalist>
 
                 </datalist>
-                <button class="button is-black" type="submit">Search</button>
-            </div>
-          </form>
-          <div class="columns mt-5 mb-5">
-            <div id="column1" class="column is-one-third">
-              <div class="card mb-5">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Profile
-                  </p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <div class="columns">
-                      <div id="resizeCol" class="column is-one-third">
-                        <div>
-                          <img width=100 alt="pokemon" src="images/alyssa.png"/>
+                        <button class="button is-black" type="submit">Search</button>
+                    </div>
+                </form>
+                <div class="columns mt-5 mb-5">
+                    <div id="column1" class="column is-one-third">
+                        <div class="card mb-5">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Profile
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns">
+                                        <div id="resizeCol" class="column is-one-third">
+                                            <div>
+                                                <img width=100 alt="pokemon" src="images/alyssa.png" />
+                                            </div>
+                                            <figcaption>Mood: Peachy 😌</figcaption>
+                                        </div>
+                                        <div class="column">
+                                            <h4><strong>Alyssa DiCarlo</strong></h4>
+                                            <p>Female</p>
+                                            <p>Status: coding</p>
+                                            <p>Currently playing: softball</p>
+                                            <a href='https://www.linkedin.com/in/alyssa-dicarlo'><img src='./images/linkedin_icon.png' width='20'></a>
+                                            <a href='https://github.com/alyssadicarlo'><img src='./images/github-icon.svg' width='20'></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <figcaption>Mood: Peachy 😌</figcaption>
-                      </div>
-                      <div class="column">
-                        <h4><strong>Alyssa DiCarlo</strong></h4>
-                        <p>Female</p>
-                        <p>Status: coding</p>
-                        <p>Currently playing: softball</p>
-                      </div>
+                        <div class="card mb-5">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Friends
+                                </p>
+                            </header>
+                            <div class="card-content no-padding">
+                                <div class="content">
+                                    <div id="pokemonFriends" class="flex p-3">
+                                        <div id="pokemonFriend1" class="loader"></div>
+                                        <div id="pokemonFriend2" class="loader"></div>
+                                        <div id="pokemonFriend3" class="loader"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Characteristics
+                                </p>
+                            </header>
+                            <div class="card-content no-padding">
+                                <div class="content">
+                                    <ul id="pokemonCharacteristics" class="hoverable_list">
+                                        <li class="hoverable_list__item">
+                                            <img src="images/height.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Height</strong></span><br />
+                                            <span>5'9"</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/eye.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Eye Color</strong></span><br />
+                                            <span>Brown</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/salon.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Hair Color</strong></span><br />
+                                            <span>Brown</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/worldwide.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Location</strong></span><br />
+                                            <span>Buffalo, NY</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-5">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Friends
-                  </p>
-                </header>
-                <div class="card-content no-padding">
-                  <div class="content">
-                    <div id="pokemonFriends" class="flex p-3">
-                      <div id="pokemonFriend1" class="loader"></div>
-                      <div id="pokemonFriend2" class="loader"></div>
-                      <div id="pokemonFriend3" class="loader"></div>
+                    <div id="column2" class="column">
+                        <div style="height: 100%" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    About Me
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="about-me-wrapper">
+                                        <img src="images/softball_alyssa.jpeg" alt="Alyssa softball">
+                                        <p>Hi there! My name is Alyssa DiCarlo. I was born in a south suburb of Chicago 24 years ago. My snow hatin' family moved from Chicago, Illinois to sunny Phoenix, Arizona when I was five years old. It was in Arizona
+                                            that I found the sport that I would come to love and appreciate for the rest of my life. I started playing softball in a recreational league at the age of six and ended my career as a professional softball player
+                                            in the NPF (National Professional Fastpitch). In between, I had the opportunity to play for four years at the University of Georgia while earning a bachelor's degree in mathematics - some of the best years of
+                                            my life. Now, my beautiful girlfriend, who also played softball in college, and I are attempting to find our way around this life without the sport we love. Luckily, I have found a new passion - software engineering.
+                                            I love that I can build things that go on the internet for everyone to use and interact with. I hope to become a software engineer in the near future.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Characteristics
-                  </p>
-                </header>
-                <div class="card-content no-padding">
-                  <div class="content">
-                    <ul id="pokemonCharacteristics" class="hoverable_list">
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/height.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Height</strong></span><br />
-                        <span>5'9"</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/eye.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Eye Color</strong></span><br />
-                        <span>Brown</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/salon.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Hair Color</strong></span><br />
-                        <span>Brown</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/worldwide.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Location</strong></span><br />
-                        <span>Buffalo, NY</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div id="column2" class="column">
-              <div style="height: 100%" class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    About Me
-                  </p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                      <div class="about-me-wrapper">
-                        <img src="images/softball_alyssa.jpeg" alt="Alyssa softball">
-                    <p>Hi there! My name is Alyssa DiCarlo. I was born in a south suburb of Chicago 24 years ago. My snow hatin' family moved from Chicago, Illinois to sunny Phoenix, Arizona when I was five years old. It was in Arizona that I found the sport that I would come to love and appreciate for the rest of my life. I started playing softball in a recreational league at the age of six and ended my career as a professional softball player in the NPF (National Professional Fastpitch). In between, I had the opportunity to play for four years at the University of Georgia while earning a bachelor's degree in mathematics - some of the best years of my life. Now, my beautiful girlfriend, who also played softball in college, and I are attempting to find our way around this life without the sport we love. Luckily, I have found a new passion - software engineering. I love that I can build things that go on the internet for everyone to use and interact with. I hope to become a software engineer in the near future.</p>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <script src="js/get_pokemon_list.js"></script>
-      <script src="js/scripts.js"></script>
-      <script src="js/results.js"></script>
-      <script src="js/homepage.js"></script>
-  </body>
+        </main>
+        <script src="js/get_pokemon_list.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/results.js"></script>
+        <script src="js/homepage.js"></script>
+</body>
+
 </html>
