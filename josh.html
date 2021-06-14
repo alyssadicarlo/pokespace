@@ -1,186 +1,172 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="styles/profile.css">
     <link rel="shortcut icon" type="image/png" href="images/pokeball.png" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="root">
-      <header>
-          <nav class="navbar" role="navigation" aria-label="main navigation">
-              <div class="navbar-brand">
-                  <a class="navbar-item" href="index.html">
-                      <div class="icon" id="randomImageDiv">
+        <header>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <div class="icon" id="randomImageDiv">
 
-                      </div>
-                      <h1><strong>PokéSpace</strong></h1>
-                  </a>
+                        </div>
+                        <h1><strong>PokéSpace</strong></h1>
+                    </a>
 
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                  </a>
-              </div>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
 
-              <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-start">
-                      <a id='active-page' href="index.html" class="navbar-item">
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a id='active-page' href="index.html" class="navbar-item">
                     Home
                   </a>
 
-                      <a class="navbar-item" href="about.html">
+                        <a class="navbar-item" href="about.html">
                     About
                   </a>
 
-                      <a class="navbar-item" href="https://github.com/alyssadicarlo/pokespace/issues">
+                        <a class="navbar-item" href="https://github.com/alyssadicarlo/pokespace/issues">
                     Report an issue
                   </a>
 
-                  </div>
+                    </div>
 
-                  <div class="navbar-end">
+                    <div class="navbar-end">
 
-                  </div>
-              </div>
-          </nav>
-      </header>
-      <main>
-        <div class="container">
-          <p style="text-align: center;">Welcome to the Poké<span class="header__tag">Space</span></p>
-          <form action="profile.html" method="GET">
-            <div class="form-flex">
-                <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
-                <datalist>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <p style="text-align: center;">Welcome to the Poké<span class="header__tag">Space</span></p>
+                <form action="profile.html" method="GET">
+                    <div class="form-flex">
+                        <input name="pokemon" id="searchInput" class="input" type="text" placeholder="Search for Pokémon" autocomplete="off" list="pokemonList" required>
+                        <datalist>
 
                 </datalist>
-                <button class="button is-black" type="submit">Search</button>
-            </div>
-          </form>
-          <div class="columns mt-5 mb-5">
-            <div id="column1" class="column is-one-third">
-              <div class="card mb-5">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Profile
-                  </p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <div class="columns">
-                      <div id="resizeCol" class="column is-one-third">
-                        <div>
-                          <img width=100 alt="pokemon" src="images/josh-placeholder.jpg"/>
+                        <button class="button is-black" type="submit">Search</button>
+                    </div>
+                </form>
+                <div class="columns mt-5 mb-5">
+                    <div id="column1" class="column is-one-third">
+                        <div class="card mb-5">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Profile
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns">
+                                        <div id="resizeCol" class="column is-one-third">
+                                            <div>
+                                                <img width=100 alt="pokemon" src="images/josh-placeholder.jpg" />
+                                            </div>
+                                            <figcaption>Mood: Hangry 😠</figcaption>
+                                        </div>
+                                        <div class="column">
+                                            <h4><strong>Josh</strong></h4>
+                                            <p>Male</p>
+                                            <p>Status: Hungry</p>
+                                            <p>Currently playing: Syphon Filter </p>
+                                            <a href='https://www.linkedin.com/in/alyssa-dicarlo'><img src='./images/linkedin_icon.png' width='20'></a>
+                                            <a href='https://github.com/joshsimon-bit'><img src='./images/github-icon.svg' width='20'></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <figcaption>Mood: Hangry 😠</figcaption>
-                      </div>
-                      <div class="column">
-                        <h4><strong>Josh</strong></h4>
-                        <p>Male</p>
-                        <p>Status: Hungry</p>
-                        <p>Currently playing: Syphon Filter </p>
-                      </div>
+                        <div class="card mb-5">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Friends
+                                </p>
+                            </header>
+                            <div class="card-content no-padding">
+                                <div class="content">
+                                    <div id="pokemonFriends" class="flex p-3">
+                                        <div id="pokemonFriend1" class="loader"></div>
+                                        <div id="pokemonFriend2" class="loader"></div>
+                                        <div id="pokemonFriend3" class="loader"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Characteristics
+                                </p>
+                            </header>
+                            <div class="card-content no-padding">
+                                <div class="content">
+                                    <ul id="pokemonCharacteristics" class="hoverable_list">
+                                        <li class="hoverable_list__item">
+                                            <img src="images/height.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Height</strong></span><br />
+                                            <span>5'10"</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/eye.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Eye Color</strong></span><br />
+                                            <span>Brown</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/salon.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Hair Color</strong></span><br />
+                                            <span>Black</span>
+                                        </li>
+                                        <li class="hoverable_list__item">
+                                            <img src="images/worldwide.svg" alt="Image" class="characteristics__image" style="width: 50px" />
+                                            <span class="characteristics__large_text"><strong>Location</strong></span><br />
+                                            <span>Atlanta, GA</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-5">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Friends
-                  </p>
-                </header>
-                <div class="card-content no-padding">
-                  <div class="content">
-                    <div id="pokemonFriends" class="flex p-3">
-                      <div id="pokemonFriend1" class="loader"></div>
-                      <div id="pokemonFriend2" class="loader"></div>
-                      <div id="pokemonFriend3" class="loader"></div>
+                    <div id="column2" class="column">
+                        <div style="height: 100%" class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    About Me
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="about-me-wrapper">
+                                        I'm Just a normal guy learning to code. I Come from a background of Private Armed Security and I am starting a career in Cyber Security. I found coding to be the most intimidating and so I decided to begin my journey here! Pls feel free to track my journey
+                                        here :-)
+                                        <img>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    Characteristics
-                  </p>
-                </header>
-                <div class="card-content no-padding">
-                  <div class="content">
-                    <ul id="pokemonCharacteristics" class="hoverable_list">
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/height.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Height</strong></span><br />
-                        <span>5'10"</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/eye.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Eye Color</strong></span><br />
-                        <span>Brown</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/salon.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Hair Color</strong></span><br />
-                        <span>Black</span>
-                      </li>
-                      <li class="hoverable_list__item">
-                        <img
-                          src="images/worldwide.svg"
-                          alt="Image"
-                          class="characteristics__image"
-                          style="width: 50px"
-                        />
-                        <span class="characteristics__large_text"><strong>Location</strong></span><br />
-                        <span>Atlanta, GA</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div id="column2" class="column">
-              <div style="height: 100%" class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    About Me
-                  </p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                      <div class="about-me-wrapper">
-                        <!-- ABOUT ME SECTION -->
-                        <img>
-                        <p></p>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <script src="js/get_pokemon_list.js"></script>
-      <script src="js/scripts.js"></script>
-      <script src="js/results.js"></script>
-      <script src="js/homepage.js"></script>
-  </body>
+        </main>
+        <script src="js/get_pokemon_list.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/results.js"></script>
+        <script src="js/homepage.js"></script>
+</body>
+
 </html>
