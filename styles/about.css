@@ -7,6 +7,10 @@ body {
     box-sizing: inherit;
 }
 
+#tomName {
+    font-size: 32px!important;
+}
+
 html {
     scroll-behavior: smooth;
     background-image: url('../images/background.jpeg');
@@ -18,6 +22,11 @@ html {
 
 .example::-webkit-scrollbar {
     display: none;
+}
+
+#tompic {
+    border-radius: 30px;
+    max-width: 250px;
 }
 
 #columns {
@@ -51,15 +60,6 @@ html {
     padding-left: 0.62rem;
     border-left: 2px solid #dbdbdb;
 }
-
-
-/* main {
-    height: calc(100vh - 4.1875rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
 
 .team-section {
     background-color: rgba(255, 255, 255, 0);
