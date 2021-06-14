@@ -8,7 +8,7 @@ A live version of this site can be viewed at [alyssadicarlo.github.io/pokepsace]
 This app was created as a group project in the DigitalCrafts May 2021 full stack web development bootcamp.
 
 ## Screenshots
-<img src="">
+<img src="./images/readmegif.gif">
 
 ## Tech/framework used
 - HTML5
